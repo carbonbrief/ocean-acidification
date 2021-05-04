@@ -1,0 +1,382 @@
+@media all and (min-width: 1900px){
+    #section-1{
+        height: 1100px;
+    }
+}
+
+@media all and (min-width:1140px) and (max-width: 1450px){    
+
+}
+
+@media all and (min-width:768px) and (max-width: 1139px){  
+}
+
+@media all and (min-width: 1280px) and (max-width: 1720px){
+    #intro-background{
+        height:730px;
+    }
+    
+    #section-1{
+        height: 775px;
+    }
+
+}
+
+@media all and (min-width: 1500px) { 
+
+    .large {
+        -ms-flex: 3 0 0;
+        -webkit-flex: 3 0 0;
+        flex: 3 0 0;
+    }
+    
+    .small {
+        -ms-flex: 1 0 0;
+        -webkit-flex: 1 0 0;
+        flex: 1 0 0;
+        /* flex-wrap: wrap;
+        justify-content: space-between; */
+    }
+
+}
+
+@media all and (min-width: 1280px) {
+    
+    #inline {
+        display: none;
+    }
+    
+    #inline h3{
+        font-size:22px;
+        padding:2% 3%;
+    }
+    
+    #inline p{
+        font-style: italic;
+        padding:0% 3%;
+        font-size:16px;
+    }
+
+}
+
+@media all and (max-width: 1280px) {
+
+
+    #intro-background {
+        height: 450px;
+    }
+
+    #section-1 {
+        height: 500px;
+    }
+
+    .column{
+    flex: 1;
+    min-width: 400px;
+    margin-right: 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+
+}
+
+@media all and (max-width: 1080px) {
+    .column{
+        min-width:330px;
+    }
+
+    #logo-large{
+        display: none;
+    }
+    #logo-small{
+    display: inherit;
+    height: 40px;
+    padding: 5px;
+    width:auto;
+}
+
+}
+
+@media all and (max-width: 980px) {
+
+    .info p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .info i {
+        font-size: 20px;
+    }
+
+    #intro-background {
+        height: 380px;
+    }
+
+    #section-1 {
+        height: 380px;
+    }
+
+    figure {
+        margin: 15px;
+    }
+
+}
+
+@media all and (min-width: 871px) and (max-width: 1280px){
+    
+    section{
+        max-width:600px;
+    }
+}
+
+/* extra breakpoint for text */
+
+@media all and (min-width: 250px) and (max-width: 830px) {
+
+    .central {
+        width: auto;
+        padding-left: 6%;
+        padding-right: 6%;
+        margin: auto;
+    }
+    figcaption {
+        font-size: 13px;
+        padding-left: 6%;
+        padding-right: 6%;
+        margin: auto;
+    }
+
+}
+
+/* < TABLET */
+
+@media all and (max-width: 767px) {
+
+    #intro-vid{
+        max-width:inherit;
+    }
+
+    ul#droplinks{
+        width: -webkit-fill-available;
+        width:100%;
+    }
+
+    #article-links{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    #text-container {
+        margin: 0px;
+        max-width: 100%
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    li{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    ul{
+        padding-left:0px;
+    }
+
+    .long-quote {
+        margin-left: 1.2em;
+        margin-top: 1em;
+        padding-left: 1.2em;
+        border-left: 3px solid #f7f3a4;
+        font-family: 'PT Serif';
+        font-size: 18px;
+        line-height: 36px;
+        color: #f4f4f4;
+        width: 90%;
+        margin-bottom: 1.2em;
+    }
+
+    img.inline-xsm{
+    width:100%;
+    }
+
+    h2#one{
+        padding-top:0;
+    }
+
+
+    figcaption#fig{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .first-par {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    ul#droplinks li a{
+        font-size:18px;
+        line-height:32px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 1em;
+        margin-left:0;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .list-group-item {
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    #intro-background {
+        height: 600px;
+    }
+
+    #section-1 {
+        height: 600px;
+    }
+
+    #section-1.row.central{
+        width:430px;
+    }
+
+    #linkedin {
+        display: none;
+    }
+
+    img.inline{
+        width: 90%;
+        object-fit: contain;
+    }
+
+    section{
+        margin: 30vh auto;
+        max-width:600px;
+    }
+
+    #inline{
+        width:auto; 
+       margin:0 45px;   
+       }
+
+       iframe#highchart{
+        display:none;
+    }
+
+    .highchart-image{
+        display: inline-block;
+    }
+
+}
+
+@media all and (max-width:600px){
+    #caption-small{
+        padding-left:6%;
+        padding-right:6%;
+    }
+}
+
+@media all and (max-width:550px){
+    .fa-lg{
+        display: none;
+    }
+
+    ul#droplinks li{
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 480px) { 
+
+    img {
+        width: 480px;
+    }
+
+    #intro-background {
+       height: 650px;
+    }
+
+    #intro-vid{
+        max-width: inherit;
+
+    }
+
+    #section-1 {
+        height: 650px;
+    }
+
+    .title-highlight {
+        padding: 0px;
+    }
+
+    h1 {
+        font-size: 23px;
+        line-height: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+#inline p, #inline h3{
+    margin: 0px 5px !important;
+    font-size: 14px;
+}
+
+.long-quote{
+    font-size:16px;
+    line-height:30px;
+}
+
+}
+
+@media all and (max-width: 450px) {
+    #section-1.row.central{
+        width:320px;
+    }
+
+    #inline{
+    margin: 0 25px
+    }
+    
+}
+
+@media all and (max-width: 450px) {
+
+}
+
+@media all and (min-width: 321px) and (max-width: 430px) {
+}
+
+/* extra breakpoint for intro video */
+
+@media all and (max-width: 400px) {
+
+    #intro-background {
+        height: 600px;
+    }
+
+    #section-1 {
+        height: 600px;
+    }
+
+}
