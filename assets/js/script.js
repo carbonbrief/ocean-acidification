@@ -75,6 +75,45 @@ const imageURLs = [
 
 for (const url of imageURLs) preloadImage(url);
 
+// HERO
+
+
+
+// var app;
+//     function initPixi() {
+//       app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
+//       // var intro = $('#intro-background');
+//       document.getElementById("intro-background").appendChild(app.view);
+//       // intro.appendChild(app.view);
+//       var image = new PIXI.Sprite.from("assets/img/underwater-hero-2AE3MDJ.jpg");
+//       image.width = window.innerWidth;
+//       image.height = window.innerHeight;
+//       app.stage.addChild(image);
+//       displacementSprite = new PIXI.Sprite.from("assets/img/cloud.jpg");
+//       displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
+//       displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
+//       app.stage.addChild(displacementSprite);
+//       app.stage.filters = [displacementFilter];
+//       app.renderer.view.style.transform = 'scale(1.02)';
+//       displacementSprite.scale.x = 2;
+//       displacementSprite.scale.y = 3;
+//       animate();
+//     }
+//     function animate() {
+//       displacementSprite.x += 0.2;
+//       displacementSprite.y += 3;
+//       requestAnimationFrame(animate);
+//     }
+//     initPixi();
+
+    $('#intro-background').ripples({
+      dropRadius: 20, 
+      perturbance: 0.02,
+      resolution: 512,
+    });
+
+  
+
 // MAPS
 
 let historicalSlider = document.getElementById("historicalRange");
@@ -249,3 +288,86 @@ $('a[href*="#"]')
 //   AUTO ADD TARGET BLANKS TO ALL NON_CB_POINTING LINKS
 
   $('a[href^="http://"], a[href^="https://"]').not('a[href*=carbonbrief]').attr('target','_blank');
+
+
+
+  (function(){
+    'use strict';
+    
+    var tau = Math.PI * 2;
+    var program = function ( context )
+{
+  context.beginPath();
+  context.arc( 0, 0, 1, 0, tau, true );
+  context.closePath();
+  context.fill();    
+};
+    var width, height;
+    var scene, camera, renderer, pointCloud;
+    
+    function onDocumentReady(){
+      initialize();
+      
+      /* DO STUFF! */
+      var material = new THREE.PointCloudMaterial({
+        color: 0xc6e7fa,
+        program
+
+      });
+      
+      var geometry = new THREE.Geometry();
+      var x, y, z;
+      _.times(15000, function(n){
+        x = (Math.random() * 1200) - 800;
+        y = (Math.random() * 1200) - 800;
+        z = (Math.random() * 1200) - 800;
+        
+        geometry.vertices.push(new THREE.Vector3(x, y, z));
+      });
+      
+      var pointCloud = new THREE.PointCloud(geometry, material);
+      scene.add(pointCloud);
+      
+      function render(){
+        window.requestAnimationFrame(render);
+        
+        _.forEach(geometry.vertices, function(particle){
+          var dX, dY, dZ;
+          dX = Math.random() * 1.2 - 0.1;
+          dY = Math.random() * 1.2 - 0.1;
+          dZ = Math.random() * 1.2 - 0.1;
+          
+          particle.add(new THREE.Vector3(dX, dY, dZ));
+        });
+        geometry.verticesNeedUpdate = true;
+        
+        renderer.render(scene, camera);
+      }
+      
+      render();
+    }
+    
+    function initialize(){
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(120, 16 / 9, 1, 1000);
+      renderer = new THREE.WebGLRenderer();
+      document.getElementById('intro-animation').appendChild(renderer.domElement);
+      // intro.appendChild(renderer.domElement);
+      window.addEventListener('resize', onWindowResize);
+      onWindowResize();
+    } 
+    
+    function onWindowResize(){
+      width = window.innerWidth;
+      height = window.innerHeight;
+      updateRendererSize();
+    }
+    
+    function updateRendererSize(){
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    }
+    
+    document.addEventListener('DOMContentLoaded', onDocumentReady);
+  })();
