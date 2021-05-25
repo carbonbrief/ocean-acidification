@@ -625,4 +625,108 @@ p.new-line{
     }
 
 
+<<<<<<< Updated upstream
 /* END MAPS */
+=======
+/* END MAPS */
+
+/* SCROLLY */
+
+.container-fluid{
+    background: rgb(187,228,216);
+    background: linear-gradient(180deg, rgba(187,228,216,1) 0%, rgba(205,224,160,1) 48%, rgba(93,110,143,1) 100%);
+    padding:5%;
+
+}
+.col, .col-sm, .col-2, .col-3, .col-4, .col-5, .col-6{
+    border:1px solid #333333;
+    border-radius: 10px;
+}
+.bubble:nth-child(1){
+    height:30vh;
+    margin:20vh -1vh;
+    padding:0;
+}
+.bubble:nth-child(2){
+    height:60vh;
+}
+.bubble:nth-child(3){
+    height:20vh;
+    margin:30vh -1vh;
+}
+.bubble:nth-child(4){
+    height:160vh;
+    margin:30vh -1vh;
+}
+.bubble:nth-child(5){
+    height:80vh;
+    margin:20vh -1vh;
+    margin-bottom:100vh
+}
+.bubble:nth-child(6){
+    height:60vh;
+    margin:20vh -1vh;
+    
+}
+.hidden{
+    visibility: hidden;
+}
+.gutter > [class*='col'] {
+margin-right:10px;
+margin-left:10px; 
+}
+.gutter > [class*='col']:first-child {
+margin-left:0; 
+}
+.gutter > [class*='col']:last-child {
+margin-right:0; 
+}
+.gutter > [class*='col-'] {
+margin-right:10px;
+margin-left:10px; 
+}
+.gutter > [class*="col-"]:last-child {
+margin-right:0;
+}
+.sticky{
+    position: sticky;
+    top:20vh;
+    /* overflow: inherit; */
+}
+#oa-background{
+    height:auto;
+}
+#floatingbubbles {
+width: 95%;
+height: auto;
+position: absolute;
+}
+.bob{
+    animation: x 6000ms infinite alternate ease-in-out,y 6000ms infinite alternate ease-in-out;
+    /* background: hsl(173, 80%, 80%); */
+}
+.bobb{
+    animation: x 5500ms infinite alternate ease-in-out,y 5500ms infinite alternate ease-in-out;
+    /* background: hsl(173, 80%, 80%); */
+}
+@keyframes x {
+from {
+    transform: translateX(0vw);
+}
+to {
+    transform: translateX(3vw);
+}
+}
+@keyframes y {
+from {
+    transform: translateX(0vh);
+}
+to {
+    transform: translateY(3vh);
+}
+}
+
+.bubble-image {
+    width: 100%;
+}
+>>>>>>> Stashed changes
