@@ -77,35 +77,6 @@ for (const url of imageURLs) preloadImage(url);
 
 // HERO
 
-
-
-// var app;
-//     function initPixi() {
-//       app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
-//       // var intro = $('#intro-background');
-//       document.getElementById("intro-background").appendChild(app.view);
-//       // intro.appendChild(app.view);
-//       var image = new PIXI.Sprite.from("assets/img/underwater-hero-2AE3MDJ.jpg");
-//       image.width = window.innerWidth;
-//       image.height = window.innerHeight;
-//       app.stage.addChild(image);
-//       displacementSprite = new PIXI.Sprite.from("assets/img/cloud.jpg");
-//       displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
-//       displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
-//       app.stage.addChild(displacementSprite);
-//       app.stage.filters = [displacementFilter];
-//       app.renderer.view.style.transform = 'scale(1.02)';
-//       displacementSprite.scale.x = 2;
-//       displacementSprite.scale.y = 3;
-//       animate();
-//     }
-//     function animate() {
-//       displacementSprite.x += 0.2;
-//       displacementSprite.y += 3;
-//       requestAnimationFrame(animate);
-//     }
-//     initPixi();
-
     $('#intro-background').ripples({
       dropRadius: 20, 
       perturbance: 0.02,
@@ -123,6 +94,8 @@ let historicalSlider = document.getElementById("historicalRange");
         let scenario = document.getElementById("scenario");
         let historicalGlobe = document.getElementById("historical-globe");
         let rcpGlobe = document.getElementById("rcp-globe");
+        let chart = document.getElementById('globe-chart');
+        let chartrcp = document.getElementById('globe-chart-rcp');
         historicalYear.innerHTML = historicalSlider.value;
         rcpYear.innerHTML = rcpSlider.value; 
 
@@ -131,46 +104,48 @@ let historicalSlider = document.getElementById("historicalRange");
         $(this).addClass("active");
         var currentClass = $(".buttons button.active").val();
         console.log(currentClass);
-        $("#scenario").text("RCP "+this.value+": ");
+        if (currentClass == 'historical'){
+          chart.src = "assets/img/maps/chart/"+currentClass+"/"+historicalYear.innerHTML+".png";
+          $(".chart-year").text(historicalYear.innerHTML);
+          $('#historical-container').addClass("active");
+          $('#rcp-container').removeClass("active");
+          $(this).removeClass("active");
+        }
+        else{
+        $(".chart-year").text("RCP "+this.value+": "+rcpYear.innerHTML);
         rcpGlobe.src = "assets/img/maps/"+currentClass+"/"+rcpYear.innerHTML+".png";
-        console.log(historicalSlider.value)
-        console.log(rcpSlider.value)
-
+        chart.src = "assets/img/maps/chart/"+currentClass+"/"+rcpYear.innerHTML+".png";
+        chartrcp.src = "assets/img/maps/chart-rcp/"+currentClass+"/"+rcpYear.innerHTML+".png";
+        scenario.innerHTML = 'RCP'+currentClass+': ';
+        $('#historical-container').removeClass("active");
+        $('#rcp-container').addClass("active");
+        //console.log(historicalSlider.value)
+        //console.log(rcpSlider.value)
+        }
         });
 
         // Update the current slider value (each time you drag the slider handle)
         historicalSlider.oninput = function() {
         var target = $(".buttons button.current").data("class");
         historicalGlobe.src = "assets/img/maps/"+target+"/"+this.value+".png";
+        chart.src = "assets/img/maps/chart/"+target+"/"+this.value+".png";
         historicalYear.innerHTML = this.value;
+        // $(".chart-year").text(this.value);
         }
 
         rcpSlider.oninput = function() {
         var target = $(".buttons button.active").data("class");
         rcpGlobe.src = "assets/img/maps/"+target+"/"+this.value+".png";
+        chart.src = "assets/img/maps/chart/"+target+"/"+this.value+".png";
+        chartrcp.src = "assets/img/maps/chart-rcp/"+target+"/"+this.value+".png";
+        // scenario.innerHTML = 'RCP'+target+': ';
         rcpYear.innerHTML = this.value;
+        //$("#scenario").text("RCP "+target+": "+rcpYear.innerHTML);
+        $(".chart-year").text("RCP"+target+": "+rcpYear.innerHTML);
         }
 
 
         // END MAPS
-
-// END OCEAN ACIDIFICATION
-
-
-// if you want to fade elements in when in view
-
-    $(window).scroll( function(){
-        $('.fadein').each( function(i){
-            
-            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            if( bottom_of_window > bottom_of_element ){
-                $(this).animate({'opacity':'0.3'},1500);
-            }
-            
-        }); 
-    });
 
 // scroll to top on window reload
 // window.onbeforeunload = function () {
@@ -291,172 +266,3 @@ $('a[href*="#"]')
 
 
 
-  (function(){
-    'use strict';
-    
-    var tau = Math.PI * 2;
-    var program = function ( context )
-{
-  context.beginPath();
-  context.arc( 0, 0, 1, 0, tau, true );
-  context.closePath();
-  context.fill();    
-};
-    var width, height;
-    var scene, camera, renderer, pointCloud;
-    
-    function onDocumentReady(){
-      initialize();
-      
-      /* DO STUFF! */
-      var material = new THREE.PointCloudMaterial({
-        color: 0xc6e7fa,
-        program
-
-      });
-      
-      var geometry = new THREE.Geometry();
-      var x, y, z;
-      _.times(15000, function(n){
-        x = (Math.random() * 1200) - 800;
-        y = (Math.random() * 1200) - 800;
-        z = (Math.random() * 1200) - 800;
-        
-        geometry.vertices.push(new THREE.Vector3(x, y, z));
-      });
-      
-      var pointCloud = new THREE.PointCloud(geometry, material);
-      scene.add(pointCloud);
-      
-      function render(){
-        window.requestAnimationFrame(render);
-        
-        _.forEach(geometry.vertices, function(particle){
-          var dX, dY, dZ;
-          dX = Math.random() * 1.2 - 0.1;
-          dY = Math.random() * 1.2 - 0.1;
-          dZ = Math.random() * 1.2 - 0.1;
-          
-          particle.add(new THREE.Vector3(dX, dY, dZ));
-        });
-        geometry.verticesNeedUpdate = true;
-        
-        renderer.render(scene, camera);
-      }
-      
-      render();
-    }
-    
-    function initialize(){
-      scene = new THREE.Scene();
-      camera = new THREE.PerspectiveCamera(120, 16 / 9, 1, 1000);
-      renderer = new THREE.WebGLRenderer();
-      document.getElementById('intro-animation').appendChild(renderer.domElement);
-      // intro.appendChild(renderer.domElement);
-      window.addEventListener('resize', onWindowResize);
-      onWindowResize();
-    } 
-    
-    function onWindowResize(){
-      width = window.innerWidth;
-      height = window.innerHeight;
-      updateRendererSize();
-    }
-    
-    function updateRendererSize(){
-      renderer.setSize(width, height);
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-    }
-    
-    document.addEventListener('DOMContentLoaded', onDocumentReady);
-  })();
-
-  // SCROLLY TRIGGERS
-
-  AOS.init({
-    duration: 2000,
-  });
-  
-  // SCROLLY BUBBLES
-
-  class bubble {
-    constructor(canvasWidth, canvasHeight) {
-    this.maxHeight = canvasHeight;
-    this.maxWidth = canvasWidth;
-    this.randomise();
-  }
-
-  generateDecimalBetween(min, max) {
-    return (Math.random() * (min - max) + max).toFixed(2);
-  }
-
-  update() {
-    this.posX = this.posX - this.movementX;
-    this.posY = this.posY - this.movementY;
-
-    if (this.posY < 0 || this.posX < 0 || this.posX > this.maxWidth) {
-      this.randomise();
-      this.posY = this.maxHeight;
-    }
-  }
-
-  randomise() {
-    this.colour = 0xcceeff;
-    this.size = this.generateDecimalBetween(2, 6);
-    this.movementX = this.generateDecimalBetween(-0.4, 0.4);
-    this.movementY = this.generateDecimalBetween(0.7, 2);
-    this.posX = this.generateDecimalBetween(0, this.maxWidth);
-    this.posY = this.generateDecimalBetween(0, this.maxHeight);
-  }
-}
-
-class background {
-  constructor() {
-    this.canvas = document.getElementById("floatingbubbles");
-    this.ctx = this.canvas.getContext("2d");
-    let actualHeight = $("#oa-background");
-    this.canvas.height = actualHeight.height();
-    console.log(this.canvas.height);
-    console.log(this);
-    this.canvas.width = window.innerWidth;
-    this.bubblesList = [];
-    this.generateBubbles();
-    this.animate();
-  }
-
-  animate() {
-    let self = this;
-    self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
-    self.bubblesList.forEach(function(bubble) {
-      bubble.update();
-      self.ctx.beginPath();
-      self.ctx.arc(bubble.posX, bubble.posY, bubble.size, 0, 2 * Math.PI);
-      self.ctx.fillStyle = "hsl(" + bubble.colour + ", 10%, 79%)";
-      self.ctx.fill();
-      self.ctx.strokeStyle = "hsl(" + bubble.colour + ", 10%, 79%)";
-      self.ctx.stroke();
-    });
-
-    requestAnimationFrame(this.animate.bind(this));
-  }
-
-  addBubble(bubble) {
-    return this.bubblesList.push(bubble);
-  }
-
-  generateBubbles() {
-    let self = this;
-    for (let i = 0; i < self.bubbleDensity(); i++) {
-      self.addBubble(new bubble(self.canvas.width, self.canvas.height));
-    }
-  }
-
-  bubbleDensity() {
-    return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
-  }
-}
-
-window.onload = function() {
-  new background();
-};
