@@ -879,3 +879,30 @@ to {
 .bordered {
     border:solid 1px #333333
 }
+
+.equation-sticky{
+    width:100%;
+    position:sticky;
+    top: 20vh;
+    right: 75vh
+}
+
+.equation-sticky:nth-child(1){
+    width:100%;
+    position:sticky;
+    top: 20vh;
+    right: 75vh
+}
+
+.equation-sticky:nth-child(2){
+    width:100%;
+    position:sticky;
+    top: 20vh;
+    right: 75vh
+}
+
+.equation-container{
+    height: 200vh;
+    width: 100%;
+    position: static
+}
