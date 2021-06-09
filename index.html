@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>TITLE</title>
+    <meta name="description" content="GOOGLE SHORT DESCRIPTION">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <meta name="author" content="AUTHOR NAMES">
     <meta name="twitter:card" content="summary">
@@ -92,17 +93,22 @@
 <body>
 
     <!-- HERO BACKGROUND -->
-    <!-- <div id="intro-background">
-        <video src="VIDEO FILE" poster="VIDEO_POSTER.png" class="vid-desktop" type="video/mp4" autoplay="true" muted loop id="intro-vid" playsinline></video>
-    </div> -->
-
+    <div id="intro-background">
+        <div id="intro-animation"></div>
+        <!-- <video src="VIDEO FILE" poster="VIDEO_POSTER.png" class="vid-desktop" type="video/mp4" autoplay="true" muted loop id="intro-vid" playsinline></video> -->
+    </div>
     <div class="row central" id="section-1">
         <div id="article-title">
             <h1><span class="title-highlight">CARBON BRIEF DUMMY ARTICLE</span></h1>
             <h3><span class="title-highlight">By AUTHORS</span></h3>
         </div>
     </div>
-    <div class="row central" id="section-2">
+
+    <!-- <div class="ocean-hero">
+        <div class="wave-hero"></div>
+        <div class="wave-hero"></div>
+      </div> -->
+    <div class="row central">
         <p class="first-par">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.</p>
@@ -148,155 +154,215 @@
 
     </div>
     <!-- MAPS -->
-    <div class="full-width">
-        <div class="widget-container">
-            <div class="buttons">
+    <div class="col">
+        <h2>Global pH levels title</h2>
+    </div>
+    <div class="row widget-container">
+        <div class="col margin-right">
+            <h3>Historical (1770 - 2000)</h3>
+        </div>
+        <div class="col">
+            <div class="buttons" style="display: none;">
                 <button class="rcp current" id="historical" value="historical"
                     data-class="historical">Historical</button>
             </div>
             <input type="range" min="1770" max="2000" value="1770" step="10" class="slider" id="historicalRange">
-            <img id="historical-globe" src="assets/img/maps/historical/1770.png">
             <div id="scenario-year"><span id="historical-year">1770</span></div>
         </div>
-        <div class="widget-container">
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <div class="row bordered">
+        <div class="col-sm-7">
+            <img id="historical-globe" class="img-fluid" src="assets/img/maps/historical/1770.png">
+        </div>
+        <div class="col-sm-5 align-self-center">
+            <p>Key etc</p>
+            <img id="globe-chart" class="img-fluid" src="assets/img/maps/chart/historical/1770.png">
+        </div>
+        <div id="scenario-year" style="display: none;"><span class="chart-year">1770</span></div>
+    </div>
+
+    <div class="row widget-container">
+        <div class="col margin-right">
+            <h3>Future (2010 - 2100)</h3>
             <div class="buttons">
-                <button class="rcp active" id="rcp2_6" value="2.6" data-class="2.6">RCP 2.6</button>
-                <button class="rcp" id="rcp4_5" value="4.5" data-class="4.5">RCP 4.5</button>
-                <button class="rcp" id="rcp6_0" value="6.0" data-class="6.0">RCP 6.0</button>
-                <button class="rcp" id="rcp8_5" value="8.5" data-class="8.5">RCP 8.5</button>
+                <button class="rcp future active" id="rcp2_6" value="2.6" data-class="2.6">RCP 2.6</button>
+                <button class="rcp future" id="rcp4_5" value="4.5" data-class="4.5">RCP 4.5</button>
+                <button class="rcp future" id="rcp6_0" value="6.0" data-class="6.0">RCP 6.0</button>
+                <button class="rcp future" id="rcp8_5" value="8.5" data-class="8.5">RCP 8.5</button>
             </div>
+        </div>
+        <div class="col">
             <input type="range" min="2010" max="2100" value="2010" step="10" class="slider" id="rcpRange">
-            <img id="rcp-globe" src="assets/img/maps/2.6/2010.png">
-            <div id="scenario-year"><span id="scenario">RCP 2.6: </span><span id="rcp-year">2010</span></div>
+            <div class="chart-year">RCP2.6: 2010</div>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <div class="row bordered">
+        <div class="col-sm-7">
+            <img id="rcp-globe" class="img-fluid" src="assets/img/maps/2.6/2010.png">
+            <div id="scenario-year" style="display: none;"><span id="scenario">RCP 2.6: </span><span
+                    id="rcp-year">2010</span></div>
+        </div>
+        <div class="col-sm-5 align-self-center">
+            <p>Key etc</p>
+            <img id="globe-chart-rcp" class="img-fluid" src="assets/img/maps/chart-rcp/2.6/2010.png">
         </div>
     </div>
 
 
     <!-- END MAPS -->
 
+    <div class="row central">
+        <h2 id="two">CHAPTER 2</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</p>
+
+    </div>
+
+    <div class="row central">
+        <h2 id="three">CHAPTER 3</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</p>
+
+    </div>
 
     <!-- SCROLLY -->
-    <div id="scrolly-container">
-        <div class="row central float-left">
-            <h2>Column 1</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <div class="container-fluid" id="oa-background">
+        <canvas id="floatingbubbles"></canvas>
+        <div class="group">
+            <div class="row sticky bubble">
+                <div class="col-2">
 
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
+                </div>
+                <div class="col-4" data-aos="fade-up">
+                    <p class="graphic-text">CO2 enters the water through:</p>
+                </div>
+            </div>
+        </div>
+        <div class="row gutter bubble">
+            <div class="col-4">
+            </div>
+            <div class="col-4" data-aos="fade-up">
+                <p class="graphic-text">Diffusion:</p>
+            </div>
+            <!-- <div class="col">
+              </div> -->
+        </div>
+        <div class="svg" id="trigger1">
+            <svg id="Layer_1" data-name="Layer 1" class="draw" xmlns="http://www.w3.org/2000/svg" width:="400"
+                height="200" viewBox="0 0 440.31 254.56">
+                <title>arrow-1</title>
+                <path id="arrow-1" class="cls-1"
+                    style="fill:none;stroke:#f4f4f4;stroke-miterlimit:10;stroke-width:3px;stroke-dasharray:554.84;stroke-dashoffset:554.82"
+                    d="M180.5,113.5c182.16-25.88,383.16,11.65,430.36,242.81" transform="translate(-180.29 -104.94)" />
+                <polygon class="cls-2" id="arrow-head-1"
+                    style="fill:none;stroke:#f4f4f4;stroke-miterlimit:10;stroke-width:3px;stroke-dasharray:554.84;stroke-dashoffset:554.82"
+                    points="416.36 244.36 418.06 241.88 430.25 250.27 437.72 237.5 440.31 239.02 431.21 254.56 416.36 244.36" />
+            </svg>
+        </div>
+        <div container="group">
+            <div class="row bob bubble">
+                <div class="col-7" data-aos="fade-right">
+                    <img class="graphic-image" src="assets/img/graphic/oa-02.png" />
+                </div>
+            </div>
+            <div class="row justify-content-end bubble">
+                <div class="col-5 bobb" data-aos="fade-left">
+                    <img class="graphic-image" src="assets/img/graphic/oa-01.png" />
+                </div>
+            </div>
+        </div>
+        <!-- <div container="group">
+              <div class="row sticky gutter bubble">
+                <div class="col-3 bob">
+                  Column
+                </div>
+                <div class="col-3 bobb">
+                    Column 
+                </div>
+                </div>
+                <div class="row gutter justify-content-end bubble">
+                <div class="col-5 bob">
+                  Column
+                </div>
+              </div>
+              </div> -->
+        <div class="row bubble" data-aos="fade-up">
+            <div class="col-2">
+            </div>
+            <div class="col-5">
+                <p class="graphic-text">Biological carbon pumps:</p>
+            </div>
+        </div>
+        <div class="svg" id="trigger2">
+            <svg id="Layer_1" data-name="Layer 1" class="draw" xmlns="http://www.w3.org/2000/svg" width:="400"
+                height="200" viewBox="0 0 440.31 254.56">
+                <title>arrow-1</title>
+                <path id="arrow-2" class="cls-1"
+                    style="fill:none;stroke:#f4f4f4;stroke-miterlimit:10;stroke-width:3px;stroke-dasharray:554.84;stroke-dashoffset:554.82"
+                    d="M180.5,113.5c182.16-25.88,383.16,11.65,430.36,242.81" transform="translate(-180.29 -104.94)" />
+                <polygon class="cls-2" id="arrow-head-2"
+                    style="fill:none;stroke:#f4f4f4;stroke-miterlimit:10;stroke-width:3px;stroke-dasharray:554.84;stroke-dashoffset:554.82"
+                    points="416.36 244.36 418.06 241.88 430.25 250.27 437.72 237.5 440.31 239.02 431.21 254.56 416.36 244.36" />
+            </svg>
+        </div>
+        <div class="row bubble gutter" data-aos="fade-down">
+            <div class="col-1">
+            </div>
+            <div class="col-6 bob" data-aos="fade-left">
+                <img class="graphic-image" src="assets/img/graphic/oa-08.png" />
+            </div>
+            <div class="col-4">
+                <p class="graphic-text margin-top">Phytoplankton taking in CO2, dying and sinking to the sea floor</p>
+            </div>
+            <!-- <div class="col-4 bob">
+                        Column
+                      </div> -->
+            <!-- <div class="col bobb">
+                        Column
+                      </div> -->
         </div>
     </div>
 
-    <div id="scrolly-container">
-        <div class="row central float-right">
-            <h2>Column 1</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <div class="row central">
+        <h2 id="three">CHAPTER 4</h2>
 
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</p>
 
-        </div>
     </div>
 
-    <<<<<<< Updated upstream=======<!-- SCROLLY -->
-
-        <div class="container-fluid" id="oa-background">
-            <canvas id="floatingbubbles"></canvas>
-            <div container="group">
-                <div class="row sticky bubble">
-                    <div class="col bob">
-                        Column
-                    </div>
-                </div>
-            </div>
-            <div class="row gutter bubble">
-                <div class="col-sm bobb" data-aos="fade-right">
-                    <img src="assets/img/diffusion-info.png" class="bubble-image">
-                </div>
-                <div class="col-sm bob" data-aos="fade-right">
-                    Column
-                </div>
-                <div class="col-sm bobb" data-aos="fade-right">
-                    Column
-                </div>
-            </div>
-            <div container="group">
-                <div class="row sticky bob bubble">
-                    <div class="col-3" data-aos="fade-right">
-                        Column
-                    </div>
-                </div>
-                <div class="row gutter justify-content-end bubble">
-                    <div class="col-2 bobb">
-                        Column
-                    </div>
-                    <div class="col-5 bob">
-                        Column
-                    </div>
-
-                </div>
-            </div>
-            <div container="group">
-                <div class="row sticky gutter bubble">
-                    <div class="col-3 bob">
-                        Column
-                    </div>
-                    <div class="col-3 bobb">
-                        Column
-                    </div>
-                </div>
-                <div class="row gutter justify-content-end bubble">
-                    <div class="col-5 bob">
-                        Column
-                    </div>
-                </div>
-            </div>
-            <div class="row sticky bubble" data-aos="fade-up">
-                <div class="col bobb">
-                    Column
-                </div>
-            </div>
-        </div>
-
-        <div class="row central">
-            <h2 id="three">CHAPTER 4</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</p>
-
-        </div>
-        >>>>>>> Stashed changes
 
 
 
+    <!-- HIGHCHART -->
 
-        <!-- HIGHCHART -->
-
-        <!-- <iframe id="highchart" src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/proxy-explainer/global-surface-temp-records.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="550px" width="800px" allowfullscreen></iframe>
+    <!-- <iframe id="highchart" src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/proxy-explainer/global-surface-temp-records.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="550px" width="800px" allowfullscreen></iframe>
             
             <div class="highchart-image"><img src="assets/img/compress/chart-1.png" class="inline-sm"/></a></div>
 
@@ -307,100 +373,101 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
 
 
-        </div>
+    </div>
 
 
-        <!-- IMAGE -->
+    <!-- IMAGE -->
 
-        <!-- <div class="img-md-container">
+    <!-- <div class="img-md-container">
             <img class="inline-md" src="IMAGE-PATH" srcset="IMAGE_PATH_SMALL 480w, IMAGE_PATH_LARGE 1200w" sizes="(max-width: 480px) 480px, 1200px" alt="Stalagmites in Han-sur-Lesse caverns, Belgium. Credit: Bombaert Patrick / Alamy Stock Photo."/>
             <figcaption>Stalagmites in Han-sur-Lesse caverns, Belgium. Credit: Bombaert Patrick / Alamy Stock Photo.</figcaption>
         </div> -->
 
+    <div class="row central">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</p>
+        <div class="long-quote">&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.&rdquo;</div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</p>
+
+        <p id="backTop"><a href="#back">Back to top</a></p>
+    </div>
+
+    <footer>
         <div class="row central">
-
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</p>
-            <div class="long-quote">&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.&rdquo;</div>
-
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</p>
-
-            <p id="backTop"><a href="#back">Back to top</a></p>
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            <p>First published: DATE</p>
         </div>
-
-        <footer>
-            <div class="row central">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip
-                    ex ea commodo consequat.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip
-                    ex ea commodo consequat.</p>
-                <p>First published: DATE</p>
-            </div>
-        </footer>
+    </footer>
 
 
-        <!-- Header logo -->
+    <!-- Header logo -->
 
-        <div class="logo">
-            <a href="https://www.carbonbrief.org"><img id="logo-large" src="assets/img/CB-logo-large-01.png"
-                    alt="Carbon Brief" /></a>
-            <a href="https://www.carbonbrief.org"><img id="logo-small" src="assets/img/CB-logo-small-01.png"
-                    alt="Carbon Brief" /></a>
-        </div>
+    <div class="logo">
+        <a href="https://www.carbonbrief.org"><img id="logo-large" src="assets/img/CB-logo-large-01.png"
+                alt="Carbon Brief" /></a>
+        <a href="https://www.carbonbrief.org"><img id="logo-small" src="assets/img/CB-logo-small-01.png"
+                alt="Carbon Brief" /></a>
+    </div>
 
-        <!-- SOCIAL SHARE ICONS. UPDATE UTM TRACKERS -->
+    <!-- SOCIAL SHARE ICONS. UPDATE UTM TRACKERS -->
 
-        <div class='share-icons'>
-            <span class="fa-stack" id="twitter">
-                <a href="https://twitter.com/intent/tweet?url=https://interactive.carbonbrief.org/how-proxy-data-reveals-climate-of-earths-distant-past/?utm_source=subdomain&utm_medium=interactive_twitter&utm_campaign=proxydata&text=How%20‘proxy’%20data%20reveals%20the%20climate%20of%20the%20Earth’s%20distant%20past%20@CarbonBrief"
-                    target="_blank">
-                    <i class="far fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x"></i>
-                </a>
-            </span>
-            <span class="fa-stack" id="facebook">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://interactive.carbonbrief.org/how-proxy-data-reveals-climate-of-earths-distant-past/?utm_source=subdomain&utm_medium=interactive_facebook&utm_campaign=proxydata"
-                    target="_blank">
+    <div class='share-icons'>
+        <span class="fa-stack" id="twitter">
+            <a href="https://twitter.com/intent/tweet?url=https://interactive.carbonbrief.org/how-proxy-data-reveals-climate-of-earths-distant-past/?utm_source=subdomain&utm_medium=interactive_twitter&utm_campaign=proxydata&text=How%20‘proxy’%20data%20reveals%20the%20climate%20of%20the%20Earth’s%20distant%20past%20@CarbonBrief"
+                target="_blank">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x"></i>
+            </a>
+        </span>
+        <span class="fa-stack" id="facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://interactive.carbonbrief.org/how-proxy-data-reveals-climate-of-earths-distant-past/?utm_source=subdomain&utm_medium=interactive_facebook&utm_campaign=proxydata"
+                target="_blank">
 
-                    <i class="far fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                </a>
-            </span>
-            <span class="fa-stack" id="linkedin">
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://interactive.carbonbrief.org/how-proxy-data-reveals-climate-of-earths-distant-past/?utm_source=subdomain&utm_medium=interactive_linkedin&utm_campaign=proxydata&title=How%20‘proxy’%20data%20reveals%20the%20climate%20of%20the%20Earth’s%20distant%20past&summary=At%20any%20one%20moment%20in%20time,%20thousands%20of%20measurements%20are%20being%20taken%20of%20the%20world's%20weather.&source=Carbon%20Brief"
-                    target="_blank">
-                    <i class="far fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                </a>
-            </span>
-        </div>
-        <<<<<<< Updated upstream <!-- INTERNAL SCRIPT FILE -->
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x"></i>
+            </a>
+        </span>
+        <span class="fa-stack" id="linkedin">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://interactive.carbonbrief.org/how-proxy-data-reveals-climate-of-earths-distant-past/?utm_source=subdomain&utm_medium=interactive_linkedin&utm_campaign=proxydata&title=How%20‘proxy’%20data%20reveals%20the%20climate%20of%20the%20Earth’s%20distant%20past&summary=At%20any%20one%20moment%20in%20time,%20thousands%20of%20measurements%20are%20being%20taken%20of%20the%20world's%20weather.&source=Carbon%20Brief"
+                target="_blank">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x"></i>
+            </a>
+        </span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+    <!-- poss remove -->
+    <!-- <script src="assets/js/pixi.min.js"></script> -->
 
-            =======
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
-            <!-- poss remove -->
-            <!-- <script src="assets/js/pixi.min.js"></script> -->
+    <script type="text/javascript" src="assets/js/jquery.ripples.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-            <script type="text/javascript" src="assets/js/jquery.ripples.js"></script>
-            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            >>>>>>> Stashed changes
-            <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="assets/js/scrollmagic-plugin.js"></script>
+
+    <!--! REMOVE ONCE READY -->
+
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
+
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
