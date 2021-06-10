@@ -19,7 +19,7 @@
       
       /* DO STUFF! */
       var material = new THREE.MeshBasicMaterial({
-        color: "yellow",  
+        color: "#6e9ec2",  
         //program
 
       });
@@ -49,7 +49,7 @@
         
         _.forEach(geometry.vertices, function(particle){
           var dX, dY, dZ;
-          dX = Math.random() * 1 + 0.3;
+          dX = Math.random() * 1 / 0.3;
           //0.1
           dY = Math.random() * 1 + 0.5;
           dZ = Math.random() * 1 + 0.9;
@@ -100,86 +100,88 @@
   
   // **** MAIN BUBBLES **** //
 
-  class bubble {
-    constructor(canvasWidth, canvasHeight) {
-    this.maxHeight = canvasHeight;
-    this.maxWidth = canvasWidth;
-    this.randomise();
-  }
+//   class bubble {
+//     constructor(canvasWidth, canvasHeight) {
+//     this.maxHeight = canvasHeight;
+//     this.maxWidth = canvasWidth;
+//     this.randomise();
+//   }
 
-  generateDecimalBetween(min, max) {
-    return (Math.random() * (min - max) + max).toFixed(2);
-  }
+//   generateDecimalBetween(min, max) {
+//     return (Math.random() * (min - max) + max).toFixed(2);
+//   }
 
-  update() {
-    this.posX = this.posX - this.movementX;
-    this.posY = this.posY - this.movementY;
+//   update() {
+//     this.posX = this.posX - this.movementX;
+//     this.posY = this.posY - this.movementY;
 
-    if (this.posY < 0 || this.posX < 0 || this.posX > this.maxWidth) {
-      this.randomise();
-      this.posY = this.maxHeight;
-    }
-  }
+//     if (this.posY < 0 || this.posX < 0 || this.posX > this.maxWidth) {
+//       this.randomise();
+//       this.posY = this.maxHeight;
+//     }
+//   }
 
-  randomise() {
-    this.colour = 0xcceeff;
-    this.size = this.generateDecimalBetween(2, 6);
-    this.movementX = this.generateDecimalBetween(-0.4, 0.4);
-    this.movementY = this.generateDecimalBetween(0.7, 2);
-    this.posX = this.generateDecimalBetween(0, this.maxWidth);
-    this.posY = this.generateDecimalBetween(0, this.maxHeight);
-  }
-}
+//   randomise() {
+//     this.colour = 0xcceeff;
+//     this.size = this.generateDecimalBetween(2, 6);
+//     this.movementX = this.generateDecimalBetween(-0.4, 0.4);
+//     this.movementY = this.generateDecimalBetween(0.7, 2);
+//     this.posX = this.generateDecimalBetween(0, this.maxWidth);
+//     this.posY = this.generateDecimalBetween(0, this.maxHeight);
+//   }
+// }
 
-class background {
-  constructor() {
-    this.canvas = document.getElementById("floatingbubbles");
-    this.ctx = this.canvas.getContext("2d");
-    let actualHeight = $("#oa-background");
-    this.canvas.height = actualHeight.height();
-    // console.log(this.canvas.height);
-    // console.log(this);
-    this.canvas.width = window.innerWidth;
-    this.bubblesList = [];
-    this.generateBubbles();
-    this.animate();
-  }
+// class background {
+//   constructor() {
+//     this.canvas = document.getElementById("floatingbubbles");
+//     this.ctx = this.canvas.getContext("2d");
+//     let actualHeight = $("#oa-background");
+//     this.canvas.height = actualHeight.height();
+//     // console.log(this.canvas.height);
+//     // console.log(this);
+//     this.canvas.width = window.innerWidth;
+//     this.bubblesList = [];
+//     this.generateBubbles();
+//     this.animate();
+//   }
+  
 
-  animate() {
-    let self = this;
-    self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
-    self.bubblesList.forEach(function(bubble) {
-      bubble.update();
-      self.ctx.beginPath();
-      self.ctx.arc(bubble.posX, bubble.posY, bubble.size, 0, 2 * Math.PI);
-      self.ctx.fillStyle = "hsl(" + bubble.colour + ", 10%, 79%)";
-      self.ctx.fill();
-      self.ctx.strokeStyle = "hsl(" + bubble.colour + ", 10%, 79%)";
-      self.ctx.stroke();
-    });
+//   animate() {
+//     let self = this;
+//     self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
+//     self.bubblesList.forEach(function(bubble) {
+//       bubble.update();
+//       self.ctx.beginPath();
+//       self.ctx.arc(bubble.posX, bubble.posY, bubble.size, 0, 2 * Math.PI);
+//       self.ctx.fillStyle = "hsl(" + bubble.colour + ", 10%, 79%)";
+//       self.ctx.fill();
+//       self.ctx.strokeStyle = "hsl(" + bubble.colour + ", 10%, 79%)";
+//       self.ctx.stroke();
+//     });
 
-    requestAnimationFrame(this.animate.bind(this));
-  }
+//     requestAnimationFrame(this.animate.bind(this));
+//   }
 
-  addBubble(bubble) {
-    return this.bubblesList.push(bubble);
-  }
+//   addBubble(bubble) {
+//     return this.bubblesList.push(bubble);
+//   }
 
-  generateBubbles() {
-    let self = this;
-    for (let i = 0; i < self.bubbleDensity(); i++) {
-      self.addBubble(new bubble(self.canvas.width, self.canvas.height));
-    }
-  }
+//   generateBubbles() {
+//     let self = this;
+//     for (let i = 0; i < self.bubbleDensity(); i++) {
+//       self.addBubble(new bubble(self.canvas.width, self.canvas.height));
+//     }
+//   }
 
-  bubbleDensity() {
-    return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
-  }
-}
+//   bubbleDensity() {
+//     return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
+//   }
+// }
 
-window.onload = function() {
-  new background();
-};
+
+// window.onload = function() {
+//   new background();
+// };
 
 // **** END MAIN BUBBLES **** //
 

@@ -688,7 +688,7 @@ p.new-line{
   }
   
   .wave-hero {
-    background: url(/assets/img/wave-hero.svg) repeat-x;
+    background: url(https://testing-tom.s3.eu-west-3.amazonaws.com/wave.svg) repeat-x;
     position: absolute;
     top: -40px;
     width: 20000px;
@@ -714,7 +714,7 @@ p.new-line{
   }
   
   .wave {
-    background: url(../img/wave.svg) repeat-x;
+    background: url(https://testing-tom.s3.eu-west-3.amazonaws.com/wave.svg) repeat-x;
     position: absolute;
     top: -40px;
     width: 20000px;
@@ -925,5 +925,5 @@ to {
 .highlights-container{
     height: 150vh;
     width: 100%;
-    position: sticky
+    position: sticky;
 }
