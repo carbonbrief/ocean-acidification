@@ -1,99 +1,99 @@
 // **** HERO BUBBLES **** //
 
-(function(){
-    'use strict';
+// (function(){
+//     'use strict';
     
-    var tau = Math.PI * 5;
-    //2
-    var program = function ( context )
-{
-  context.beginPath();
-  context.arc( 0, 0, 1, 0, tau, true );
-  context.closePath();
-  context.fill();    
-};
-    var width, height;
-    var scene, camera, renderer;
+//     var tau = Math.PI * 5;
+//     //2
+//     var program = function ( context )
+// {
+//   context.beginPath();
+//   context.arc( 0, 0, 1, 0, tau, true );
+//   context.closePath();
+//   context.fill();    
+// };
+//     var width, height;
+//     var scene, camera, renderer;
     
-    function onDocumentReady(){
-      initialize();
+//     function onDocumentReady(){
+//       initialize();
       
-      /* DO STUFF! */
-      var material = new THREE.MeshBasicMaterial({
-        color: 0xc6e7fa,
-        program
+//       /* DO STUFF! */
+//       var material = new THREE.MeshBasicMaterial({
+//         color: 0xc6e7fa,
+//         program
 
-      });
+//       });
 
 
-    //   var material = new THREE.MeshBasicMaterial({
-    //     color: 0x0000ff
-    // });
+//     //   var material = new THREE.MeshBasicMaterial({
+//     //     color: 0x0000ff
+//     // });
     
-    var radius = 150;
-    var segments = 35; //<-- Increase or decrease for more resolution I guess
+//     var radius = 150;
+//     var segments = 35; //<-- Increase or decrease for more resolution I guess
     
-    var circleGeometry = new THREE.CircleGeometry( radius, segments );              
-    var circle = new THREE.Mesh( circleGeometry, material );
+//     var circleGeometry = new THREE.CircleGeometry( radius, segments );              
+//     var circle = new THREE.Mesh( circleGeometry, material );
       
-      var geometry = new THREE.Geometry();
-      var x, y, z;
-      _.times(15000, function(n){
-          //1150
-        x = (Math.random() * 1200) - 1199;
-        y = (Math.random() * 1200) - 1199;
-        z = (Math.random() * 1200) - 1199;
+//       var geometry = new THREE.Geometry();
+//       var x, y, z;
+//       _.times(15000, function(n){
+//           //1150
+//         x = (Math.random() * 1200) - 1199;
+//         y = (Math.random() * 1200) - 1199;
+//         z = (Math.random() * 1200) - 1199;
         
-        geometry.vertices.push(new THREE.Vector3(x, y, z));
-      });
+//         geometry.vertices.push(new THREE.Vector3(x, y, z));
+//       });
       
-      var pointCloud = new THREE.PointCloud(geometry, material, circle);
-      scene.add(pointCloud);
+//       var pointCloud = new THREE.PointCloud(geometry, material, circle);
+//       scene.add(pointCloud);
       
-      function render(){
-        window.requestAnimationFrame(render);
+//       function render(){
+//         window.requestAnimationFrame(render);
         
-        _.forEach(geometry.vertices, function(particle){
-          var dX, dY, dZ;
-          dX = Math.random() * 1 + 0.3;
-          //0.1
-          dY = Math.random() * 1 - 0.1;
-          dZ = Math.random() * 1 + 0.8;
+//         _.forEach(geometry.vertices, function(particle){
+//           var dX, dY, dZ;
+//           dX = Math.random() * 1 + 0.3;
+//           //0.1
+//           dY = Math.random() * 1 - 0.1;
+//           dZ = Math.random() * 1 + 0.8;
           
-          particle.add(new THREE.Vector3(dX, dY, dZ));
-        });
-        geometry.verticesNeedUpdate = true;
+//           particle.add(new THREE.Vector3(dX, dY, dZ));
+//         });
+//         geometry.verticesNeedUpdate = true;
         
-        renderer.render(scene, camera);
-      }
+//         renderer.render(scene, camera);
+//       }
       
-      render();
-    }
+//       render();
+//     }
     
-    function initialize(){
-      scene = new THREE.Scene();
-      camera = new THREE.PerspectiveCamera(120, width / height, 1, 1000);
-      renderer = new THREE.WebGLRenderer();
-      document.getElementById('intro-animation').appendChild(renderer.domElement);
-      // intro.appendChild(renderer.domElement);
-      window.addEventListener('resize', onWindowResize);
-      onWindowResize();
-    } 
+//     function initialize(){
+//       scene = new THREE.Scene();
+//       camera = new THREE.PerspectiveCamera(120, width / height, 1, 1000);
+//       renderer = new THREE.WebGLRenderer();
+//       document.getElementById('intro-animation').appendChild(renderer.domElement);
+//       // intro.appendChild(renderer.domElement);
+//       window.addEventListener('resize', onWindowResize);
+//       onWindowResize();
+//     } 
     
-    function onWindowResize(){
-      width = window.innerWidth;
-      height = window.innerHeight;
-      updateRendererSize();
-    }
+//     function onWindowResize(){
+//       width = window.innerWidth;
+//       height = window.innerHeight;
+//       updateRendererSize();
+//     }
     
-    function updateRendererSize(){
-      renderer.setSize(width, height);
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-    }
+//     function updateRendererSize(){
+//       renderer.setSize(width, height);
+//       camera.aspect = width / height;
+//       camera.updateProjectionMatrix();
+//     }
     
-    document.addEventListener('DOMContentLoaded', onDocumentReady);
-  })();
+//     document.addEventListener('DOMContentLoaded', onDocumentReady);
+//   })();
 
   // **** END HERO BUBBLES **** //
 
@@ -105,86 +105,86 @@
   
   // **** MAIN BUBBLES **** //
 
-  class bubble {
-    constructor(canvasWidth, canvasHeight) {
-    this.maxHeight = canvasHeight;
-    this.maxWidth = canvasWidth;
-    this.randomise();
-  }
+//   class bubble {
+//     constructor(canvasWidth, canvasHeight) {
+//     this.maxHeight = canvasHeight;
+//     this.maxWidth = canvasWidth;
+//     this.randomise();
+//   }
 
-  generateDecimalBetween(min, max) {
-    return (Math.random() * (min - max) + max).toFixed(2);
-  }
+//   generateDecimalBetween(min, max) {
+//     return (Math.random() * (min - max) + max).toFixed(2);
+//   }
 
-  update() {
-    this.posX = this.posX - this.movementX;
-    this.posY = this.posY - this.movementY;
+//   update() {
+//     this.posX = this.posX - this.movementX;
+//     this.posY = this.posY - this.movementY;
 
-    if (this.posY < 0 || this.posX < 0 || this.posX > this.maxWidth) {
-      this.randomise();
-      this.posY = this.maxHeight;
-    }
-  }
+//     if (this.posY < 0 || this.posX < 0 || this.posX > this.maxWidth) {
+//       this.randomise();
+//       this.posY = this.maxHeight;
+//     }
+//   }
 
-  randomise() {
-    this.colour = 0xcceeff;
-    this.size = this.generateDecimalBetween(2, 6);
-    this.movementX = this.generateDecimalBetween(-0.4, 0.4);
-    this.movementY = this.generateDecimalBetween(0.7, 2);
-    this.posX = this.generateDecimalBetween(0, this.maxWidth);
-    this.posY = this.generateDecimalBetween(0, this.maxHeight);
-  }
-}
+//   randomise() {
+//     this.colour = 0xcceeff;
+//     this.size = this.generateDecimalBetween(2, 6);
+//     this.movementX = this.generateDecimalBetween(-0.4, 0.4);
+//     this.movementY = this.generateDecimalBetween(0.7, 2);
+//     this.posX = this.generateDecimalBetween(0, this.maxWidth);
+//     this.posY = this.generateDecimalBetween(0, this.maxHeight);
+//   }
+// }
 
-class background {
-  constructor() {
-    this.canvas = document.getElementById("floatingbubbles");
-    this.ctx = this.canvas.getContext("2d");
-    let actualHeight = $("#oa-background");
-    this.canvas.height = actualHeight.height();
-    // console.log(this.canvas.height);
-    // console.log(this);
-    this.canvas.width = window.innerWidth;
-    this.bubblesList = [];
-    this.generateBubbles();
-    this.animate();
-  }
+// class background {
+//   constructor() {
+//     this.canvas = document.getElementById("floatingbubbles");
+//     this.ctx = this.canvas.getContext("2d");
+//     let actualHeight = $("#oa-background");
+//     this.canvas.height = actualHeight.height();
+//     // console.log(this.canvas.height);
+//     // console.log(this);
+//     this.canvas.width = window.innerWidth;
+//     this.bubblesList = [];
+//     this.generateBubbles();
+//     this.animate();
+//   }
 
-  animate() {
-    let self = this;
-    self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
-    self.bubblesList.forEach(function(bubble) {
-      bubble.update();
-      self.ctx.beginPath();
-      self.ctx.arc(bubble.posX, bubble.posY, bubble.size, 0, 2 * Math.PI);
-      self.ctx.fillStyle = "hsl(" + bubble.colour + ", 10%, 79%)";
-      self.ctx.fill();
-      self.ctx.strokeStyle = "hsl(" + bubble.colour + ", 10%, 79%)";
-      self.ctx.stroke();
-    });
+//   animate() {
+//     let self = this;
+//     self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
+//     self.bubblesList.forEach(function(bubble) {
+//       bubble.update();
+//       self.ctx.beginPath();
+//       self.ctx.arc(bubble.posX, bubble.posY, bubble.size, 0, 2 * Math.PI);
+//       self.ctx.fillStyle = "hsl(" + bubble.colour + ", 10%, 79%)";
+//       self.ctx.fill();
+//       self.ctx.strokeStyle = "hsl(" + bubble.colour + ", 10%, 79%)";
+//       self.ctx.stroke();
+//     });
 
-    requestAnimationFrame(this.animate.bind(this));
-  }
+//     requestAnimationFrame(this.animate.bind(this));
+//   }
 
-  addBubble(bubble) {
-    return this.bubblesList.push(bubble);
-  }
+//   addBubble(bubble) {
+//     return this.bubblesList.push(bubble);
+//   }
 
-  generateBubbles() {
-    let self = this;
-    for (let i = 0; i < self.bubbleDensity(); i++) {
-      self.addBubble(new bubble(self.canvas.width, self.canvas.height));
-    }
-  }
+//   generateBubbles() {
+//     let self = this;
+//     for (let i = 0; i < self.bubbleDensity(); i++) {
+//       self.addBubble(new bubble(self.canvas.width, self.canvas.height));
+//     }
+//   }
 
-  bubbleDensity() {
-    return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
-  }
-}
+//   bubbleDensity() {
+//     return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
+//   }
+// }
 
-window.onload = function() {
-  new background();
-};
+// window.onload = function() {
+//   new background();
+// };
 
 // **** END MAIN BUBBLES **** //
 
