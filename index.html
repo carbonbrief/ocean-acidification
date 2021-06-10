@@ -45,6 +45,9 @@
     <!-- Image lightbox. Follow documentation for use https://dimsemenov.com/plugins/magnific-popup/documentation.html -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- Internal CSS stylesheet and responsive sheet -->
 
@@ -244,42 +247,149 @@
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
-    <div class="container-fluid" id="oa-background">
+    <div class="container-fluid-background" id="oa-background">
         <canvas id="floatingbubbles"></canvas>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="assets/img/graphic/oa-draft-components_Artboard 1-01.png">
-                    <div class="col">
-                        <p>1 of 2</p>
-                    </div>
-                </div>
-            </div>
+        <div class="row central">
+            <p>
+                “Ocean acidification” is a decrease in the pH of ocean water, driven by CO2 reacting with the water to
+                form a weak acid. The ocean is currently a weak “alkaline” – the opposite of an acid – so the phrase
+                “acidification” does not mean that the ocean is becoming an acid. Instead, it means that the ocean is
+                becoming less alkaline and moving closer to a “neutral” pH.</p>
 
-            <div class="row central">
-                <h2 id="three">CHAPTER 4</h2>
+            <p> Sabine discusses how ocean acidification was first “discovered”:</p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                    ea
-                    commodo consequat.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                    ea
-                    commodo consequat.</p>
+            <p>Talking head 1:00-3:20?</p>
 
-            </div>
+            <p>Carbon is constantly cycling between the atmosphere, land and ocean. However, carbon is currently
+                entering the ocean faster than it is leaving, largely due to human activity. There are two main ways
+                that the ocean takes up carbon from the atmosphere – the “biological” carbon pump, and the “physical”
+                carbon pump.</p>
 
         </div>
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <!-- <canvas id="floatingbubbles"></canvas> -->
+                    <img class="graphic-image" style="padding: auto;" data-aos="zoom-in-down"
+                        src=" assets/img/graphic/oa-draft-components_Artboard 1-01.png">
+
+                </div>
+
+                <div class="col-sm-6" style="padding-right: auto;">
+                    <p>The physical carbon pump – also known as the “solubility” pump – describes the process of CO2
+                        from the atmosphere entering the ocean through diffusion. <mark>Diffusion is the movement
+                            of molecules
+                            across a “concentration gradient” from areas of low pressure to areas of high
+                            pressure.</mark>
+                        This is
+                        a basic law of physics Sabine explains:
+                    </p>
+                    <quote>“The physical
+                        pump is a simple
+                        law of
+                        thermodynamics,
+                        or a
+                        physical
+                        property of any
+                        gases
+                        that a
+                        gas will always move from a high concentration to low concentration. So you've got CO2 in the
+                        atmosphere, and you've got CO2 in the ocean. And whichever is higher – it will go from that
+                        medium to the other medium.”
+                    </quote>
+
+                </div>
+            </div>
+        </div>
+        <div class="row central">
+            <p>Human activity is causing atmospheric CO2 levels to rise, making the level of CO2 – more specifically
+                the “partial pressure” – higher in the atmosphere than in the ocean. This means that, via diffusion,
+                CO2 is moving from the atmosphere into the ocean.</p>
+
+            <p>It takes roughly one year for a change in atmospheric CO2 to balance out with ocean levels through
+                diffusion alone. However, there are many factors that can affect diffusion.</p>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-sm-6" style="padding-right: auto;">
+                    <p>For example, if the water is choppy and there are lots of breaking waves, the bubbles of air
+                        mixed into the water will speed up diffusion of CO2 into the water. During high-intensity winds,
+                        these bubbles can be responsible for half of the CO2 transfer between the air and ocean.</p>
+
+                    <p>This is because breaking waves increase the surface area between the water and air, Sabine
+                        explains:</p>
+
+                    <quote>“Water is a very viscous fluid, and the exchange [of gasses] between the air and the water
+                        surface is very difficult because of surface tension and other properties of water. A breaking
+                        wave that injects air into the water creates a bubble – and the smaller bubbles in particular
+                        have a lot of surface area. So there's a lot of opportunity to exchange, rather than just like a
+                        calm lake surface that has very limited surface area.”</quote>
+
+                </div>
 
 
-        <!-- HIGHCHART -->
+                <div class="col-sm-6">
+                    <!-- <canvas id="floatingbubbles"></canvas> -->
+                    <img class="graphic-image" style="max-width: 80%; scroll-padding-top: auto; position: sticky;"
+                        data-aos="zoom-in-down" src=" assets/img/graphic/oa-draft-components_Artboard 2.png">
 
-        <!-- <iframe id="highchart" src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/proxy-explainer/global-surface-temp-records.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="550px" width="800px" allowfullscreen></iframe>
+                </div>
+                <div class="row central">
+                    <p>Temperature can also affect the solubility pump. It is well established that cold water can hold
+                        more CO2 than warm water. (This is for the same reason that fizzy drinks tend to go flat more
+                        quickly in warmer weather.) This means that ocean acidification can be “more drastic” in colder
+                        regions, Dr Ramessur tells Carbon Brief.</p>
+
+                    <p>It also means that as the planet warms, the oceans are able to hold less CO2. One study estimates
+                        that by the end of the 21st century, warming will reduce the uptake of anthropogenic CO2 by the
+                        ocean by 9-15%.</p>
+
+                    <p>Temperature can also influence ocean circulation. Ocean water is constantly circulating through
+                        different depths of the ocean. However as temperatures rise, the layers in the ocean are
+                        separating
+                        out more – a process called stratification. This can alter the concentration gradient of CO2
+                        between
+                        the ocean and atmosphere and change the rate of diffusion.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="row central">
+        <h2 id="three">CHAPTER 4</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea
+            commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea
+            commodo consequat.</p>
+
+    </div>
+
+    </div>
+
+
+    <!-- HIGHCHART -->
+
+    <!-- <iframe id="highchart" src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/proxy-explainer/global-surface-temp-records.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="550px" width="800px" allowfullscreen></iframe>
             
             <div class="highchart-image"><img src="assets/img/compress/chart-1.png" class="inline-sm"/></a></div>
 

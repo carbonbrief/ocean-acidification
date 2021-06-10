@@ -751,7 +751,7 @@ p.new-line{
 
 /* SCROLLY */
 
-.container-fluid{
+.container-fluid-background{
     background: linear-gradient(180deg, rgba(187,228,216,1) 0%, rgba(205,224,160,1) 48%, rgba(93,110,143,1) 100%);
     padding:5%;
     margin-top: 15vh;
@@ -939,3 +939,17 @@ to {
     top: 20px
     
 }
+
+quote{
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    font-style: normal;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-style: italic;
+} 
