@@ -3,7 +3,8 @@
 (function(){
     'use strict';
     
-    var tau = Math.PI * 2;
+    var tau = Math.PI * 5;
+    //2
     var program = function ( context )
 {
   context.beginPath();
@@ -19,13 +20,18 @@
       
       /* DO STUFF! */
       var material = new THREE.MeshBasicMaterial({
-        color: "yellow",  
-        //program
+        color: 0xc6e7fa,
+        program
 
       });
+
+
+    //   var material = new THREE.MeshBasicMaterial({
+    //     color: 0x0000ff
+    // });
     
-    var radius = 5;
-    var segments = 8;
+    var radius = 150;
+    var segments = 35; //<-- Increase or decrease for more resolution I guess
     
     var circleGeometry = new THREE.CircleGeometry( radius, segments );              
     var circle = new THREE.Mesh( circleGeometry, material );
@@ -34,9 +40,9 @@
       var x, y, z;
       _.times(15000, function(n){
           //1150
-        x = (Math.random() * 2200) - 2199;
-        y = (Math.random() * 2200) - 2199;
-        z = (Math.random() * 2200) - 2199;
+        x = (Math.random() * 1200) - 1199;
+        y = (Math.random() * 1200) - 1199;
+        z = (Math.random() * 1200) - 1199;
         
         geometry.vertices.push(new THREE.Vector3(x, y, z));
       });
@@ -51,8 +57,8 @@
           var dX, dY, dZ;
           dX = Math.random() * 1 + 0.3;
           //0.1
-          dY = Math.random() * 1 + 0.5;
-          dZ = Math.random() * 1 + 0.9;
+          dY = Math.random() * 1 - 0.1;
+          dZ = Math.random() * 1 + 0.8;
           
           particle.add(new THREE.Vector3(dX, dY, dZ));
         });
@@ -66,8 +72,7 @@
     
     function initialize(){
       scene = new THREE.Scene();
-      camera = new THREE.PerspectiveCamera(150, width / height, 0.1, 300);
-      console.log(camera);
+      camera = new THREE.PerspectiveCamera(120, width / height, 1, 1000);
       renderer = new THREE.WebGLRenderer();
       document.getElementById('intro-animation').appendChild(renderer.domElement);
       // intro.appendChild(renderer.domElement);
