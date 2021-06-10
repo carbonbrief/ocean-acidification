@@ -927,3 +927,15 @@ to {
     width: 100%;
     position: sticky
 }
+
+.equation{
+    width: 100%
+}
+
+.equation-text{
+    width: 50%;
+    float: left;
+    position: relative;
+    top: 20px
+    
+}
