@@ -913,7 +913,7 @@ to {
 }
 
 .equation-container{
-    width: 80vh;
+    width: 50vh;
     /* margin-right: 10%; */
     margin-left: 40%;
     /* padding-left: 15px; */
@@ -953,3 +953,12 @@ quote{
     margin-inline-end: 0px;
     font-style: italic;
 } 
+
+.paddingright{
+    padding-right: 10vh;
+}
+
+.paddingleft{
+    padding-left: 10vh;
+}
+
