@@ -589,7 +589,7 @@ p.new-line{
 /* MAPS */
 
 .widget-container{
-    width: 100%;
+    width: 101%;
     padding:10px 5px;
     text-align: left;
     background-color: #fff;
@@ -603,12 +603,21 @@ p.new-line{
     display: inline-block;
 }
 
-#globe-chart, #globe-chart-rcp{
+.globe-container{
+    background-color: #fff;
+}
+
+#globe-chart{
     width: 85%;
+}
+
+.padding-left{
+    padding-left:3vw;
 }
 
 .margin-right{
     border-right: 1px solid #333333;
+    margin-right: 3%;
 }
 
 #myRange{
@@ -624,7 +633,6 @@ p.new-line{
     opacity: 1;
     -webkit-transition: .2s;
     transition: opacity .2s;
-    margin-top:1em;
     }
 
     .slider::-webkit-slider-thumb {
@@ -643,6 +651,65 @@ p.new-line{
     border-radius: 50%;
     background: #999999;
     cursor: pointer;
+    }
+
+    .float-left, .float-right{
+        padding:0;
+    }
+
+    label{
+        margin-bottom:0
+    }
+
+    .buttons{
+        display: inline-block;
+        margin: 5px 0;
+    }
+
+    .instructions{
+        margin-bottom:0.2em;
+        margin-top:0.6em;
+        font-size:15px;
+    }
+
+    #legend ul li{
+        cursor:auto
+    }
+    
+    .legend-icon{
+        margin-right: 5px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    #year, #value{
+        font-weight: 700
+    }
+
+    #scenario, #ph{
+        font-size:14px;
+    }
+
+    #scenario-year{
+        padding: 5px;
+        font-size: 3em;
+        position: absolute;
+        bottom: 20%;
+        left: 10%;
+        color: #0b4572;
+    }
+    #ph-value{
+        padding: 5px;
+        font-size: 2.4em;
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        color: #0b4572;
+    }
+
+    #legend ul{
+        display: flex;
+        margin-bottom: 0;
     }
 
     .rcp{
@@ -671,6 +738,10 @@ p.new-line{
 
     .full-width.active{
         background-color: rgba(164, 219, 242, 0.208);
+    }
+
+    #scenario{
+        display: none;
     }
 
 
