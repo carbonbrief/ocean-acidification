@@ -150,68 +150,49 @@
 
     </div>
     <!-- MAPS -->
-    <div class="col">
-        <h2>Global pH levels title</h2>
-    </div>
     <div class="row widget-container">
-        <div class="col margin-right">
-            <h3>Historical (1770 - 2000)</h3>
+        <div class="col-3 margin-right">
+            <h3>Widget title</h3>
+            <p class="instructions">Instructions</p>
         </div>
-        <div class="col">
-            <div class="buttons" style="display: none;">
-                <button class="rcp current" id="historical" value="historical"
-                    data-class="historical">Historical</button>
-            </div>
-            <input type="range" min="1770" max="2000" value="1770" step="10" class="slider" id="historicalRange">
-            <div id="scenario-year"><span id="historical-year">1770</span></div>
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-    </div>
-    <div class="row bordered">
-        <div class="col-sm-7">
-            <img id="historical-globe" class="img-fluid" src="assets/img/maps/historical/1770.png">
-        </div>
-        <div class="col-sm-5 align-self-center">
-            <p>Key etc</p>
-            <img id="globe-chart" class="img-fluid" src="assets/img/maps/chart/historical/1770.png">
-        </div>
-        <div id="scenario-year" style="display: none;"><span class="chart-year">1770</span></div>
-    </div>
-
-    <div class="row widget-container">
-        <div class="col margin-right">
-            <h3>Future (2010 - 2100)</h3>
+        <div class="col-4">
             <div class="buttons">
-                <button class="rcp future active" id="rcp2_6" value="2.6" data-class="2.6">RCP 2.6</button>
+                <button class="rcp historical active" id="historical" value="historical" data-class="historical">Historical</button>
+                <button class="rcp future" id="rcp2_6" value="2.6" data-class="2.6">RCP 2.6</button>
                 <button class="rcp future" id="rcp4_5" value="4.5" data-class="4.5">RCP 4.5</button>
                 <button class="rcp future" id="rcp6_0" value="6.0" data-class="6.0">RCP 6.0</button>
                 <button class="rcp future" id="rcp8_5" value="8.5" data-class="8.5">RCP 8.5</button>
             </div>
-        </div>
-        <div class="col">
-            <input type="range" min="2010" max="2100" value="2010" step="10" class="slider" id="rcpRange">
-            <div class="chart-year">RCP2.6: 2010</div>
+            <input type="range" min="1770" max="2100" value="1770" step="10" class="slider" id="yearRange">
+            <label for="1770" class="float-left">1770</label>
+            <label for="" class="float-right">2100</label>
+            
         </div>
         <div class="col">
         </div>
         <div class="col">
         </div>
     </div>
-    <div class="row bordered">
-        <div class="col-sm-7">
-            <img id="rcp-globe" class="img-fluid" src="assets/img/maps/2.6/2010.png">
-            <div id="scenario-year" style="display: none;"><span id="scenario">RCP 2.6: </span><span
-                    id="rcp-year">2010</span></div>
+    <div class="row bordered globe-container">
+        <div class="col-lg-6 align-self-center">
+            <img id="globe" class="img-fluid" src="assets/img/maps/historical/1770.png">
         </div>
-        <div class="col-sm-5 align-self-center">
-            <p>Key etc</p>
-            <img id="globe-chart-rcp" class="img-fluid" src="assets/img/maps/chart-rcp/2.6/2010.png">
+        
+        <div class="col-lg-6 align-self-center">
+            <div id="legend">
+                <ul>
+                    <li><span class="legend-icon" style="color:#0b4572"><i class="fas fa-minus"></i></span> Historical</li>
+                    <li><span class="legend-icon" style="color:#20998a"><i class="fas fa-minus"></i></span> RCP2.6</li>
+                    <li><span class="legend-icon" style="color:#efc530"><i class="fas fa-minus"></i></span> RCP4.5</li>
+                    <li><span class="legend-icon" style="color:#c7432b"><i class="fas fa-minus"></i></span> RCP6.0</li>
+                    <li><span class="legend-icon" style="color:#740707"><i class="fas fa-minus"></i></span> RCP8.5</li>
+                </ul>
+            </div>
+            <img id="globe-chart" class="img-fluid" src="assets/img/maps/chart/historical/1770.png">
+            <div id="scenario-year"><span id="year">1770</span><span id="scenario">(RCP 2.6)</span></div>
+            <div id="ph-value"><span id="value">8.18</span><span id="ph">pH</span></div>
         </div>
     </div>
-
 
     <!-- END MAPS -->
 
@@ -240,6 +221,8 @@
     </div>
 
     <!-- SCROLLY -->
+    
+
     <div class="ocean">
         <div class="wave"></div>
         <div class="wave"></div>
