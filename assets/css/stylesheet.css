@@ -972,22 +972,27 @@ to {
 
 .black {color: #333333;}
 
-.stickyequation1{position: sticky;
+.stickyequation1{
+    margin-top: 20vh;
+    position: sticky;
     height:100vh;
     top:50vh;
 }
 
-    .stickyequation2{position: sticky;
-        height:100vh;
+    .stickyequation2{
+        position: sticky;
+        height:200vh;
         top:50vh;}
 
-    .stickyequation3{position: sticky;
-        height:150vh;
+    .stickyequation3{
+        position: sticky;
+        height:300vh;
         top:50vh;}
 
-/* .stickycontainer{
+.stickycontainer{
     height:100vh;
-position: absolute;}
-     */
+    position: relative;
+}
+     
 
        
