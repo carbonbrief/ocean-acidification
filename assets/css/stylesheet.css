@@ -835,7 +835,7 @@ p.new-line{
     padding:5%;
     margin-top: 15vh; */
 
-}
+
 /* .col, .col-sm, .col-2, .col-3, .col-4, .col-5, .col-6{
     border:1px solid #333333;
     border-radius: 10px;
@@ -1044,25 +1044,27 @@ to {
 .black {color: #333333;}
 
 .stickyequation1{
-    margin-top: 20vh;
     position: sticky;
-    height:100vh;
     top:50vh;
+    margin-top: 60vh;
 }
 
     .stickyequation2{
         position: sticky;
-        height:200vh;
-        top:50vh;}
+        top:50vh;
+        margin-top: 60vh;
+}
 
     .stickyequation3{
         position: sticky;
-        height:300vh;
-        top:50vh;}
+        top:50vh;
+        margin-top: 60vh;
+}
 
 .stickycontainer{
     height:100vh;
     position: relative;
+    top: 0vh;
 }
      
 
