@@ -595,6 +595,7 @@ p.new-line{
     background-color: #fff;
     border: solid 1px #333333;
     margin: auto;
+    margin-top:10vh;
 }
 .widget-container > img{
     width:100%;
@@ -655,6 +656,7 @@ p.new-line{
 
     .float-left, .float-right{
         padding:0;
+        padding-top:5px;
     }
 
     label{
@@ -744,7 +746,6 @@ p.new-line{
         display: none;
     }
 
-
 /* END MAPS */
 
 /* WAVE */
@@ -760,7 +761,7 @@ p.new-line{
   }
   
   .wave-hero {
-    background: url(/assets/img/wave-hero.svg) repeat-x;
+    background: url(https://testing-tom.s3.eu-west-3.amazonaws.com/wave.svg) repeat-x;
     position: absolute;
     top: -40px;
     width: 20000px;
@@ -786,7 +787,7 @@ p.new-line{
   }
   
   .wave {
-    background: url(../img/wave.svg) repeat-x;
+    background: url(https://testing-tom.s3.eu-west-3.amazonaws.com/wave.svg) repeat-x;
     position: absolute;
     top: -40px;
     width: 20000px;
@@ -834,7 +835,6 @@ p.new-line{
     background: linear-gradient(180deg, rgb(62, 21, 176) 0%, rgb(53, 80, 202) 48%, rgb(33, 56, 102) 100%);
     padding:5%;
     margin-top: 15vh; */
-
 
 /* .col, .col-sm, .col-2, .col-3, .col-4, .col-5, .col-6{
     border:1px solid #333333;
@@ -967,6 +967,8 @@ to {
     right: 75vh
 }
 
+
+
 .equation-sticky:nth-child(1){
     width:100%;
     position:sticky;
@@ -1042,6 +1044,12 @@ to {
   }
 
 .black {color: #333333;}
+
+.stickycontainer{
+    height:100vh;
+    position: relative;
+    top:0vh
+}
 
 .stickyequation1{
     position: sticky;

@@ -19,7 +19,7 @@
       
       /* DO STUFF! */
       var material = new THREE.MeshBasicMaterial({
-        color: "yellow",  
+        color: "#6e9ec2",  
         //program
 
       });
@@ -49,7 +49,7 @@
         
         _.forEach(geometry.vertices, function(particle){
           var dX, dY, dZ;
-          dX = Math.random() * 1 + 0.3;
+          dX = Math.random() * 1 / 0.3;
           //0.1
           dY = Math.random() * 1 + 0.5;
           dZ = Math.random() * 1 + 0.9;
@@ -144,6 +144,7 @@ class background {
     this.generateBubbles();
     this.animate();
   }
+  
 
   animate() {
     let self = this;
@@ -176,6 +177,7 @@ class background {
     return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
   }
 }
+
 
 window.onload = function() {
   new background();
