@@ -283,58 +283,58 @@ let screenWidth = $(window).width();
 
 // autoplay video and pause offscreen
 
-let $Vid = $(".video");
+// let $Vid = $(".video");
 
-$Vid.each(function () {
+// $Vid.each(function () {
 
-  let _this = this;
+//   let _this = this;
 
-  var vidBottom = new Waypoint({
-    element: _this,
-    handler: function (direction) {
-      if (direction == "down") {
-        _this.play();
-      } else {
-        _this.pause();
-      }
-    },
-    offset: "50%"
-  });
+//   var vidBottom = new Waypoint({
+//     element: _this,
+//     handler: function (direction) {
+//       if (direction == "down") {
+//         _this.play();
+//       } else {
+//         _this.pause();
+//       }
+//     },
+//     offset: "50%"
+//   });
 
-  var vidTop = new Waypoint({
-    element: _this,
-    handler: function (direction) {
-      if (direction == "up") {
-        _this.play();
-      } else {
-        _this.pause();
-      }
-    },
-    offset: "-30%"
-  });
+//   var vidTop = new Waypoint({
+//     element: _this,
+//     handler: function (direction) {
+//       if (direction == "up") {
+//         _this.play();
+//       } else {
+//         _this.pause();
+//       }
+//     },
+//     offset: "-30%"
+//   });
 
-});
+// });
 
 // SERVE DIFFERENT VIDEOS DEPENDING ON USER DEVICE
 
-function changeVideo() {
+// function changeVideo() {
 
-  // $(window).resize(function() {
-  windowWidth = $(window).width();
+//   // $(window).resize(function() {
+//   windowWidth = $(window).width();
 
-  if (windowWidth < 767) {
-    if ($('#intro-vid').hasClass('vid-desktop')) {
-      $('#intro-vid').removeClass('vid-desktop')
-      $('#intro-vid').attr('src', 'assets/video/proxy-map-hero_mobile.mp4')
-    }
+//   if (windowWidth < 767) {
+//     if ($('#intro-vid').hasClass('vid-desktop')) {
+//       $('#intro-vid').removeClass('vid-desktop')
+//       $('#intro-vid').attr('src', 'assets/video/proxy-map-hero_mobile.mp4')
+//     }
 
-  } else {
-    $('#intro-vid').addClass('vid-desktop')
-    $('#intro-vid').attr('src', 'assets/video/proxy-map-hero_1.mp4')
-  }
-  // });
+//   } else {
+//     $('#intro-vid').addClass('vid-desktop')
+//     $('#intro-vid').attr('src', 'assets/video/proxy-map-hero_1.mp4')
+//   }
+//   // });
 
-}
+// }
 
 $(window).resize(function () { changeVideo() })
 

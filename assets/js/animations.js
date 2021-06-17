@@ -88,7 +88,7 @@
   // SCROLLY TRIGGERS
 
   AOS.init({
-    duration: 2000,
+    duration: 2300,
   });
   
   // **** MAIN BUBBLES **** //
