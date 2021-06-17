@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'PT Serif', serif;
-    color: #333333;
+    color: #f3f3f3;
     background-color: #f4f4f4;
     overflow-x: hidden;
 
@@ -218,7 +218,7 @@ h2 {
     font-weight: 700;
     font-size: 30px;
     line-height: 1.1;
-    color:#333333;
+    color:#f3f3f3;
     display: block;
     margin-block-start: 1.33em;
     margin-block-end: 1.33em;
@@ -246,6 +246,7 @@ p {
     margin-inline-end: 0px;
 }
 
+
 a {
     color: #333333;
     text-decoration: none;
@@ -271,11 +272,11 @@ a:hover {
     margin-left: 1.5em;
     margin-top: 1em;
     padding-left: 1.5em;
-    border-left: 3px solid #0b4572;
+    border-left: 3px solid #f3f3f3;
     font-family: 'PT Serif';
     font-size: 20px;
     line-height: 34px;
-    color: #333333;
+    color: #f3f3f3;
     width: 85%;
     margin-bottom: 1.5em;
 }
@@ -594,6 +595,7 @@ p.new-line{
     background-color: #fff;
     border: solid 1px #333333;
     margin: auto;
+    margin-top:10vh;
 }
 .widget-container > img{
     width:100%;
@@ -654,6 +656,7 @@ p.new-line{
 
     .float-left, .float-right{
         padding:0;
+        padding-top:5px;
     }
 
     label{
@@ -821,12 +824,18 @@ p.new-line{
 
 /* SCROLLY */
 
-.container-fluid{
-    background: linear-gradient(180deg, rgba(187,228,216,1) 0%, rgba(205,224,160,1) 48%, rgba(93,110,143,1) 100%);
+.container-fluid-background{
+    background: linear-gradient(180deg, rgb(93, 100, 222) 0%, rgba(205,224,160,1) 48%, rgba(93,110,143,1) 100%);
     padding:5%;
     margin-top: 15vh;
 
 }
+
+/* .container-fluid-background{
+    background: linear-gradient(180deg, rgb(62, 21, 176) 0%, rgb(53, 80, 202) 48%, rgb(33, 56, 102) 100%);
+    padding:5%;
+    margin-top: 15vh; */
+
 /* .col, .col-sm, .col-2, .col-3, .col-4, .col-5, .col-6{
     border:1px solid #333333;
     border-radius: 10px;
@@ -958,6 +967,8 @@ to {
     right: 75vh
 }
 
+
+
 .equation-sticky:nth-child(1){
     width:100%;
     position:sticky;
@@ -995,5 +1006,74 @@ to {
 .highlights-container{
     height: 150vh;
     width: 100%;
-    position: sticky;
+    position: sticky
 }
+
+.equation{
+    width: 100%
+}
+
+.equation-text{
+    width: 50%;
+    float: left;
+    position: relative;
+    top: 20px
+    
+}
+
+.paddingright{
+    padding-right: 10vh;
+}
+
+.paddingleft{
+    padding-left: 10vh;
+}
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.black {color: #333333;}
+
+.stickycontainer{
+    height:100vh;
+    position: relative;
+    top:0vh
+}
+
+.stickyequation1{
+    position: sticky;
+    top:50vh;
+    margin-top: 60vh;
+}
+
+    .stickyequation2{
+        position: sticky;
+        top:50vh;
+        margin-top: 60vh;
+}
+
+    .stickyequation3{
+        position: sticky;
+        top:50vh;
+        margin-top: 60vh;
+}
+
+.stickycontainer{
+    height:100vh;
+    position: relative;
+    top: 0vh;
+}
+     
+
+       
