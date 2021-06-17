@@ -1069,6 +1069,12 @@ to {
         margin-top: 60vh;
 }
 
+.stickyequation4{
+    position: sticky;
+    top:50vh;
+    margin-top: 60vh;
+}
+
 .stickycontainer{
     height:100vh;
     position: relative;
