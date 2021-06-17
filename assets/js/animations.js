@@ -1,47 +1,40 @@
 // **** HERO BUBBLES **** //
 
 (function(){
-    'use strict';
-    
-    var tau = Math.PI * 2;
-    var program = function ( context )
-{
-  context.beginPath();
-  context.arc( 0, 0, 1, 0, tau, true );
-  context.closePath();
-  context.fill();    
-};
+
     var width, height;
-    var scene, camera, renderer;
+    var scene, camera, renderer, mesh;
     
     function onDocumentReady(){
       initialize();
-      
-      /* DO STUFF! */
-      var material = new THREE.MeshBasicMaterial({
-        color: "#6e9ec2",  
-        //program
+    
 
-      });
-    
-    var radius = 5;
-    var segments = 8;
-    
-    var circleGeometry = new THREE.CircleGeometry( radius, segments );              
-    var circle = new THREE.Mesh( circleGeometry, material );
-      
+    var loader = new THREE.TextureLoader();
+    loader.crossOrigin = true;
+
+    var material = new THREE.PointsMaterial({
+      //color: 0xFFFFFF,
+      size: 0.7,
+      map: THREE.ImageUtils.loadTexture("assets/img/graphic/hero-bubbles.png"),
+      transparent: true,
+      opacity:0.7,
+      blending: THREE.AdditiveBlending,
+      fog: false,
+      depthTest: false,
+    });
+
       var geometry = new THREE.Geometry();
       var x, y, z;
-      _.times(15000, function(n){
+      _.times(12000, function(){
           //1150
-        x = (Math.random() * 2200) - 2199;
-        y = (Math.random() * 2200) - 2199;
-        z = (Math.random() * 2200) - 2199;
+        x = (Math.random() * 800) - 799;
+        y = (Math.random() * 800) - 799;
+        z = (Math.random() * 800) - 799;
         
         geometry.vertices.push(new THREE.Vector3(x, y, z));
       });
       
-      var pointCloud = new THREE.PointCloud(geometry, material, circle);
+      var pointCloud = new THREE.Points(geometry, material);
       scene.add(pointCloud);
       
       function render(){
@@ -49,10 +42,10 @@
         
         _.forEach(geometry.vertices, function(particle){
           var dX, dY, dZ;
-          dX = Math.random() * 1 / 0.3;
+          dX = Math.random()
           //0.1
-          dY = Math.random() * 1 + 0.5;
-          dZ = Math.random() * 1 + 0.9;
+          dY = Math.random()
+          dZ = Math.random()
           
           particle.add(new THREE.Vector3(dX, dY, dZ));
         });
@@ -66,11 +59,11 @@
     
     function initialize(){
       scene = new THREE.Scene();
-      camera = new THREE.PerspectiveCamera(150, width / height, 0.1, 300);
-      console.log(camera);
-      renderer = new THREE.WebGLRenderer();
+      camera = new THREE.PerspectiveCamera(85, width / height, 0.1, 300);
+
+      renderer = new THREE.WebGLRenderer()
+      renderer.setSize(window.innerWidth, window.innerHeight)
       document.getElementById('intro-animation').appendChild(renderer.domElement);
-      // intro.appendChild(renderer.domElement);
       window.addEventListener('resize', onWindowResize);
       onWindowResize();
     } 
