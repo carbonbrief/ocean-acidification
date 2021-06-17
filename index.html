@@ -377,14 +377,67 @@
 
 
 
-    <div class="row central">
-        <h2 id="three" class="black" style="padding-top: 10vh">The chemistry of ocean acidification
-        </h2>
-    </div>
+    <!-- <div class="row central"> -->
+        <!-- MAPS -->
+        <div class="row widget-container">
+            <div class="col-3 margin-right">
+                <h3 class="black">Widget title</h3>
+                <p class="instructions black">Instructions</p>
+            </div>
+            <div class="col-4">
+                <div class="buttons">
+                    <button class="rcp historical active" id="historical" value="historical"
+                        data-class="historical">Historical</button>
+                    <button class="rcp future" id="rcp2_6" value="2.6" data-class="2.6">RCP 2.6</button>
+                    <button class="rcp future" id="rcp4_5" value="4.5" data-class="4.5">RCP 4.5</button>
+                    <button class="rcp future" id="rcp6_0" value="6.0" data-class="6.0">RCP 6.0</button>
+                    <button class="rcp future" id="rcp8_5" value="8.5" data-class="8.5">RCP 8.5</button>
+                </div>
+                <input type="range" min="1770" max="2100" value="1770" step="10" class="slider" id="yearRange">
+                <label for="1770" class="float-left black">1770</label>
+                <label for="" class="float-right black">2100</label>
+
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row bordered globe-container">
+            <div class="col-lg-6 align-self-center">
+                <img id="globe" class="img-fluid" src="assets/img/maps/historical/1770.png">
+            </div>
+
+            <div class="col-lg-6 align-self-center">
+                <div id="legend">
+                    <ul>
+                        <li class="black"><span class="legend-icon" style="color:#0b4572"><i class="fas fa-minus"></i></span>
+                            Historical</li>
+                        <li class="black"><span class="legend-icon" style="color:#20998a"><i class="fas fa-minus"></i></span> RCP2.6
+                        </li>
+                        <li class="black"><span class="legend-icon" style="color:#efc530"><i class="fas fa-minus"></i></span> RCP4.5
+                        </li>
+                        <li class="black"><span class="legend-icon" style="color:#c7432b"><i class="fas fa-minus"></i></span> RCP6.0
+                        </li>
+                        <li class="black"><span class="legend-icon" style="color:#740707"><i class="fas fa-minus"></i></span> RCP8.5
+                        </li>
+                    </ul>
+                </div>
+                <img id="globe-chart" class="img-fluid" src="assets/img/maps/chart/historical/1770.png">
+                <div id="scenario-year"><span id="year">1770</span><span id="scenario">(RCP 2.6)</span></div>
+                <div id="ph-value"><span id="value">8.18</span><span id="ph">pH</span></div>
+            </div>
+        </div>
+
+        <!-- END MAPS -->
+
+    <!-- </div> -->
 
 
     <div class="row central equation">
         <div class="col-sm-6 paddingleft">
+            <h2 id="four" class="black" style="padding-top: 10vh">The chemistry of ocean acidification
+            </h2>
             <p class="black">Ocean acidification is driven by carbon dioxide reacting with water to form carbonic
                 acid. Changes in
                 acidity
@@ -573,60 +626,6 @@
             </p>
 
         </div>
-
-
-        <!-- MAPS -->
-        <div class="row widget-container">
-            <div class="col-3 margin-right">
-                <h3>Widget title</h3>
-                <p class="instructions">Instructions</p>
-            </div>
-            <div class="col-4">
-                <div class="buttons">
-                    <button class="rcp historical active" id="historical" value="historical"
-                        data-class="historical">Historical</button>
-                    <button class="rcp future" id="rcp2_6" value="2.6" data-class="2.6">RCP 2.6</button>
-                    <button class="rcp future" id="rcp4_5" value="4.5" data-class="4.5">RCP 4.5</button>
-                    <button class="rcp future" id="rcp6_0" value="6.0" data-class="6.0">RCP 6.0</button>
-                    <button class="rcp future" id="rcp8_5" value="8.5" data-class="8.5">RCP 8.5</button>
-                </div>
-                <input type="range" min="1770" max="2100" value="1770" step="10" class="slider" id="yearRange">
-                <label for="1770" class="float-left">1770</label>
-                <label for="" class="float-right">2100</label>
-
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-        </div>
-        <div class="row bordered globe-container">
-            <div class="col-lg-6 align-self-center">
-                <img id="globe" class="img-fluid" src="assets/img/maps/historical/1770.png">
-            </div>
-
-            <div class="col-lg-6 align-self-center">
-                <div id="legend">
-                    <ul>
-                        <li><span class="legend-icon" style="color:#0b4572"><i class="fas fa-minus"></i></span>
-                            Historical</li>
-                        <li><span class="legend-icon" style="color:#20998a"><i class="fas fa-minus"></i></span> RCP2.6
-                        </li>
-                        <li><span class="legend-icon" style="color:#efc530"><i class="fas fa-minus"></i></span> RCP4.5
-                        </li>
-                        <li><span class="legend-icon" style="color:#c7432b"><i class="fas fa-minus"></i></span> RCP6.0
-                        </li>
-                        <li><span class="legend-icon" style="color:#740707"><i class="fas fa-minus"></i></span> RCP8.5
-                        </li>
-                    </ul>
-                </div>
-                <img id="globe-chart" class="img-fluid" src="assets/img/maps/chart/historical/1770.png">
-                <div id="scenario-year"><span id="year">1770</span><span id="scenario">(RCP 2.6)</span></div>
-                <div id="ph-value"><span id="value">8.18</span><span id="ph">pH</span></div>
-            </div>
-        </div>
-
-        <!-- END MAPS -->
 
         <div class="row central">
 

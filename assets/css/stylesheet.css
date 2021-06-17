@@ -589,12 +589,13 @@ p.new-line{
 /* MAPS */
 
 .widget-container{
-    width: 101%;
+    width: 100%;
     padding:10px 5px;
     text-align: left;
     background-color: #fff;
     border: solid 1px #333333;
     margin: auto;
+    margin-top:10vh;
 }
 .widget-container > img{
     width:100%;
@@ -655,6 +656,7 @@ p.new-line{
 
     .float-left, .float-right{
         padding:0;
+        padding-top:5px;
     }
 
     label{
@@ -835,7 +837,6 @@ p.new-line{
     padding:5%;
     margin-top: 15vh; */
 
-
 /* .col, .col-sm, .col-2, .col-3, .col-4, .col-5, .col-6{
     border:1px solid #333333;
     border-radius: 10px;
@@ -967,6 +968,8 @@ to {
     right: 75vh
 }
 
+
+
 .equation-sticky:nth-child(1){
     width:100%;
     position:sticky;
@@ -1042,6 +1045,12 @@ to {
   }
 
 .black {color: #333333;}
+
+.stickycontainer{
+    height:100vh;
+    position: relative;
+    top:0vh
+}
 
 .stickyequation1{
     position: sticky;
