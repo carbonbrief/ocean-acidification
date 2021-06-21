@@ -142,6 +142,7 @@
         padding-right: 6%;
         margin: auto;
     }
+
     figcaption {
         font-size: 13px;
         padding-left: 6%;
@@ -149,7 +150,11 @@
         margin: auto;
     }
 
+
+
 }
+
+
 
 /* < TABLET */
 
@@ -194,7 +199,7 @@
         margin-left: 1.2em;
         margin-top: 1em;
         padding-left: 1.2em;
-        border-left: 3px solid #f7f3a4;
+        border-left: 3px solid #ffffff;
         font-family: 'PT Serif';
         font-size: 18px;
         line-height: 36px;
@@ -378,5 +383,17 @@
     #section-1 {
         height: 600px;
     }
+
+}
+
+/* extra breakpoint for scrolly equation */
+
+@media all and (max-width: 1200px) {
+
+
+.equation-buffer {
+    height: 800px;
+
+}
 
 }
