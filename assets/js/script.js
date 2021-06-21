@@ -283,37 +283,7 @@ let screenWidth = $(window).width();
 
 // autoplay video and pause offscreen
 
-// let $Vid = $(".video");
-
-// $Vid.each(function () {
-
-//   let _this = this;
-
-//   var vidBottom = new Waypoint({
-//     element: _this,
-//     handler: function (direction) {
-//       if (direction == "down") {
-//         _this.play();
-//       } else {
-//         _this.pause();
-//       }
-//     },
-//     offset: "50%"
-//   });
-
-//   var vidTop = new Waypoint({
-//     element: _this,
-//     handler: function (direction) {
-//       if (direction == "up") {
-//         _this.play();
-//       } else {
-//         _this.pause();
-//       }
-//     },
-//     offset: "-30%"
-//   });
-
-// });
+// 
 
 // SERVE DIFFERENT VIDEOS DEPENDING ON USER DEVICE
 
@@ -335,10 +305,6 @@ let screenWidth = $(window).width();
 //   // });
 
 // }
-
-$(window).resize(function () { changeVideo() })
-
-$(document).ready(function () { changeVideo() })
 
 // smooth scroll
 
