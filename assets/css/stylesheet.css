@@ -87,6 +87,7 @@ canvas{ width: 100%; height: 100%; }
     shape-outside: circle();
     margin-right:-15%;
     margin-top:10px;
+    padding:5%;
 }
 
 .float-left {
@@ -938,29 +939,49 @@ margin-right:0;
 width: 95%;
 height: auto;
 position: absolute;
+-webkit-transform: rotateZ(360deg);
+transform: rotateZ(360deg);
 }
 .bob{
     animation: x 6000ms infinite alternate ease-in-out,y 6000ms infinite alternate ease-in-out;
+    transform: translateZ(0);
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
     /* background: hsl(173, 80%, 80%); */
 }
 .bobb{
     animation: x 5500ms infinite alternate ease-in-out,y 5500ms infinite alternate ease-in-out;
+    transform: translateZ(0);
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
     /* background: hsl(173, 80%, 80%); */
 }
 @keyframes x {
 from {
     transform: translateX(0vw);
+    /* transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0); */
 }
 to {
     transform: translateX(3vw);
+    /* transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0); */
 }
 }
 @keyframes y {
 from {
     transform: translateX(0vh);
+    /* transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0); */
 }
 to {
     transform: translateY(3vh);
+    /* transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0); */
 }
 }
 

@@ -161,14 +161,14 @@ class background {
 
   generateBubbles() {
     let self = this;
-    for (let i = 0; i < self.bubbleDensity(); i++) {
+    for (let i = 0; i < 10; i++) {
       self.addBubble(new bubble(self.canvas.width, self.canvas.height));
     }
   }
 
-  bubbleDensity() {
-    return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
-  }
+  // bubbleDensity() {
+  //   return Math.sqrt((this.canvas.height, this.canvas.width) / 80);
+  // }
 }
 
 class background1 {
@@ -208,15 +208,16 @@ class background1 {
 
   generateBubbles() {
     let self = this;
-    for (let i = 0; i < self.bubbleDensity(); i++) {
+    for (let i = 0; i < 10; i++) {
       self.addBubble(new bubble(self.canvas.width, self.canvas.height));
     }
   }
 
-  bubbleDensity() {
-    return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
-  }
+  // bubbleDensity() {
+  //   return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
+  // }
 }
+
 
 
 window.onload = function() {
