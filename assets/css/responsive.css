@@ -11,7 +11,7 @@
 @media all and (min-width:768px) and (max-width: 1139px){  
 }
 
-@media all and (min-width: 1280px) and (max-width: 1720px){
+/* @media all and (min-width: 1280px) and (max-width: 1720px){
     #intro-background{
         height:730px;
     }
@@ -20,7 +20,7 @@
         height: 775px;
     }
 
-}
+} */
 
 @media all and (min-width: 1500px) { 
 
@@ -160,9 +160,6 @@
 
 @media all and (max-width: 767px) {
 
-    #intro-vid{
-        max-width:inherit;
-    }
 
     ul#droplinks{
         width: -webkit-fill-available;
@@ -320,10 +317,6 @@
        height: 650px;
     }
 
-    #intro-vid{
-        max-width: inherit;
-
-    }
 
     #section-1 {
         height: 650px;
