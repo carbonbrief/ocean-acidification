@@ -23,6 +23,8 @@
       depthTest: false,
     });
 
+    material.map.minFilter = THREE.LinearFilter;
+
       var geometry = new THREE.Geometry();
       var x, y, z;
       _.times(12000, function(){
@@ -161,14 +163,14 @@ class background {
 
   generateBubbles() {
     let self = this;
-    for (let i = 0; i < self.bubbleDensity(); i++) {
+    for (let i = 0; i < 10; i++) {
       self.addBubble(new bubble(self.canvas.width, self.canvas.height));
     }
   }
 
-  bubbleDensity() {
-    return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
-  }
+  // bubbleDensity() {
+  //   return Math.sqrt((this.canvas.height, this.canvas.width) / 80);
+  // }
 }
 
 class background1 {
@@ -208,15 +210,16 @@ class background1 {
 
   generateBubbles() {
     let self = this;
-    for (let i = 0; i < self.bubbleDensity(); i++) {
+    for (let i = 0; i < 10; i++) {
       self.addBubble(new bubble(self.canvas.width, self.canvas.height));
     }
   }
 
-  bubbleDensity() {
-    return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
-  }
+  // bubbleDensity() {
+  //   return Math.sqrt((this.canvas.height, this.canvas.width) * 2);
+  // }
 }
+
 
 
 window.onload = function() {
@@ -231,45 +234,45 @@ window.onload = function() {
 // **** SVGS **** //
 
 
-function pathPrepare ($el) {
-    var lineLength = $el[0].getTotalLength();
-    console.log(lineLength)
-    $el.css("stroke-dasharray", lineLength);
-    $el.css("stroke-dashoffset", lineLength);
-  }
+// function pathPrepare ($el) {
+//     var lineLength = $el[0].getTotalLength();
+//     console.log(lineLength)
+//     $el.css("stroke-dasharray", lineLength);
+//     $el.css("stroke-dashoffset", lineLength);
+//   }
 
-  var $arrow1 = $("path#arrow-1");
-  var $arrowHead1 = $("polygon#arrow-head-1");
-  var $arrow2 = $("path#arrow-2");
-  var $arrowHead2 = $("polygon#arrow-head-2");
+//   var $arrow1 = $("path#arrow-1");
+//   var $arrowHead1 = $("polygon#arrow-head-1");
+//   var $arrow2 = $("path#arrow-2");
+//   var $arrowHead2 = $("polygon#arrow-head-2");
 
-  // prepare SVG
-  pathPrepare($arrow1);
-  pathPrepare($arrowHead1);
-  pathPrepare($arrow2);
-  pathPrepare($arrowHead2);
+//   // prepare SVG
+//   pathPrepare($arrow1);
+//   pathPrepare($arrowHead1);
+//   pathPrepare($arrow2);
+//   pathPrepare($arrowHead2);
 
-  // init controller
-  var controller = new ScrollMagic.Controller();
+//   // init controller
+//   var controller = new ScrollMagic.Controller();
 
-  // build tween
-  var tween = new TimelineMax()
-    .add(TweenMax.to($arrow1, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    .add(TweenMax.to($arrowHead1, 0.1, {strokeDashoffset: 0, ease:Linear.easeNone})) 
-    //.add(TweenMax.to("path", 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);			// change color during the whole thing
+//   // build tween
+//   var tween = new TimelineMax()
+//     .add(TweenMax.to($arrow1, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+//     .add(TweenMax.to($arrowHead1, 0.1, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+//     //.add(TweenMax.to("path", 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);			// change color during the whole thing
 
-    var tween2 = new TimelineMax()
-    .add(TweenMax.to($arrow2, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    .add(TweenMax.to($arrowHead2, 0.1, {strokeDashoffset: 0, ease:Linear.easeNone}))
+//     var tween2 = new TimelineMax()
+//     .add(TweenMax.to($arrow2, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+//     .add(TweenMax.to($arrowHead2, 0.1, {strokeDashoffset: 0, ease:Linear.easeNone}))
 
-  // build scene
-  var scene1 = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 200, tweenChanges: true})
-          .setTween(tween)
-          // .addIndicators()
-          .addTo(controller);
-  var scene2 = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 200, tweenChanges: true})
-          .setTween(tween2)
-          // .addIndicators()
-          .addTo(controller);
+//   // build scene
+//   var scene1 = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 200, tweenChanges: true})
+//           .setTween(tween)
+//           // .addIndicators()
+//           .addTo(controller);
+//   var scene2 = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 200, tweenChanges: true})
+//           .setTween(tween2)
+//           // .addIndicators()
+//           .addTo(controller);
 
 // **** END SVGS **** //

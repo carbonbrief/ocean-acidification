@@ -77,6 +77,19 @@ canvas{ width: 100%; height: 100%; }
     padding-right: 15px;
 }
 
+.inherit{
+    display: inherit;
+}
+
+.inherit img{
+    width:450px;
+    float:right;
+    shape-outside: circle();
+    margin-right:-15%;
+    margin-top:10px;
+    padding:5%;
+}
+
 .float-left {
     float: left;
     flex: 50%;
@@ -683,6 +696,27 @@ p.new-line{
         font-size:15px;
     }
 
+    .sliderticks {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        margin-left: 8.5%;
+      }
+      
+      .sliderticks p {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 1px;
+        background: #999999;
+        height: 7px;
+        line-height: 34px;
+        font-size:14px;
+        margin: 0 0 18px 0;
+        color:#333333;
+      }
+
     #legend ul li{
         cursor:auto
     }
@@ -716,6 +750,27 @@ p.new-line{
         bottom: 10%;
         left: 10%;
         color: #0b4572;
+    }
+    #chart-line{
+        position: absolute;
+        border-right: 2px dashed #999999;
+        height: 79%;
+        bottom: 10%;
+        left: 58.7%;
+    }
+
+    #obsv, #proj{
+    position: absolute;
+    transform: rotate(-90deg);
+    color: #999999;
+    bottom: 18%;
+    padding: 0;
+    margin: 0;
+    font-size:13px;
+    }
+
+    #obsv{
+        right:10%;
     }
 
     #legend ul{
@@ -884,29 +939,49 @@ margin-right:0;
 width: 95%;
 height: auto;
 position: absolute;
+-webkit-transform: rotateZ(360deg);
+transform: rotateZ(360deg);
 }
 .bob{
     animation: x 6000ms infinite alternate ease-in-out,y 6000ms infinite alternate ease-in-out;
+    transform: translateZ(0);
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
     /* background: hsl(173, 80%, 80%); */
 }
 .bobb{
     animation: x 5500ms infinite alternate ease-in-out,y 5500ms infinite alternate ease-in-out;
+    transform: translateZ(0);
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
     /* background: hsl(173, 80%, 80%); */
 }
 @keyframes x {
 from {
     transform: translateX(0vw);
+    /* transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0); */
 }
 to {
     transform: translateX(3vw);
+    /* transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0); */
 }
 }
 @keyframes y {
 from {
     transform: translateX(0vh);
+    /* transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0); */
 }
 to {
     transform: translateY(3vh);
+    /* transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0); */
 }
 }
 
