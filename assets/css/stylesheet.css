@@ -1022,16 +1022,22 @@ to {
 .equation-sticky{
     width:100%;
     position:sticky;
-    top: 20vh;
+    top: 10vh;
     right: 75vh
 }
 
+.equation-tall{
+    width:100%;
+    position:sticky;
+    top: 5h;
+    right: 75vh
+}
 
 
 .equation-sticky:nth-child(1){
     width:100%;
     position:sticky;
-    top: 20vh;
+    top: 10vh;
 }
 
 .equation-sticky:nth-child(2){
@@ -1112,25 +1118,25 @@ to {
 
 .stickyequation1{
     position: sticky;
-    top:50vh;
+    top: 40vh;
     margin-top: 60vh;
 }
 
     .stickyequation2{
         position: sticky;
-        top:50vh;
+        top: 40vh;
         margin-top: 60vh;
 }
 
     .stickyequation3{
         position: sticky;
-        top:50vh;
+        top: 40vh;
         margin-top: 60vh;
 }
 
 .stickyequation4{
     position: sticky;
-    top:50vh;
+    top: 30vh;
     margin-top: 60vh;
     margin-bottom:20vh;
 }
